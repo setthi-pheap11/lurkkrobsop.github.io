@@ -12,10 +12,26 @@ header {
     color: #000000;
     padding: 20px;
     text-align: left;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+}
+.title1 {
+    text-align: left;
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
 }
+.title2{
+    margin-top: -120px ;
+    justify-content: end;
+}
+.title-img{
+    margin-left: 1200px;
+    margin-bottom: -50px;
+    margin-top: -300px;
+    }
 
 header img {
     /* margin-left: auto; */
