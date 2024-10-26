@@ -77,6 +77,11 @@ line {
   color: #a96ae6;
 }
 
+.bg-A96AE6 {
+  background-color: #a96ae6;
+  color: white !important;
+}
+
 ul {
   padding: 0;
   list-style: none;
@@ -151,9 +156,9 @@ ul {
   display: inline-block;
   width: 22px;
 }
-.sub-menu-top a,
-.contain-menu a:hover {
-  color: #a96ae6;
+.sub-menu-top span,
+.contain-menu span:hover {
+  /* color: #a96ae6; */
 }
 
 .menu .home_logo {
