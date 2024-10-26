@@ -115,7 +115,7 @@ header {
 }
 
 .grid-item1:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .grid-item::first-line, .grid-item1::first-line {
@@ -174,5 +174,55 @@ header {
         width: 400px;
         margin-left: -100px;
     }
-
+   
 }
+
+.div-bank{
+    margin-bottom: 500px;
+}
+.bank{
+    /* max-width: 1400px; */
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    margin: auto;
+}
+.img-bank{
+    width: 200px;
+    
+}
+.title-i{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: center  ;
+    gap: 9px;
+    white-space: nowrap;
+    
+}
+.title-i h4{
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    margin: 0;
+}
+.pay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: auto;
+    margin-bottom:-20px;
+   
+}
+.pay2{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: auto;
+    margin-bottom: 200px;
+    margin-left: 388px;
+    
+}
+
