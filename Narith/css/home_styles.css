@@ -381,4 +381,97 @@ img{
     border-right: 1px solid #e5e5e5;
   }
 
+  .product-thumb-link {
+    display: block;
+    overflow: hidden;
+    position: relative;
+  }
+  .product-thumb-link img,.item-product-bestseller .product-thumb img{
+    transition:all 0.3s ease-out 0s;
+    -webkit-transition:all 0.3s ease-out 0s;
+  }
+  .hot-deal-product-thumb .product-thumb-link:hover img,.item-product-bestseller .product-thumb:hover img {
+    transform:scale(1.15);
+    -webkit-transform:scale(1.15);
+  }
+  .second-thumb {
+      left: 0;
+      position: absolute;
+      top: 100%;
+  }
+  .product-thumb:hover .product-thumb-link img{
+    transform:translateY(-100%);
+    -webkit-transform:translateY(-100%);
+  }
+
+  .product-thumb{
+    position: relative;
+    overflow: hidden;
+  }
+
+  .product-thumb .addcart-link.addcart-single {
+    background: #fe9c00 none repeat scroll 0 0;
+    border-radius: 50%;
+    bottom: 0;
+    color: #fff;
+    content: "";
+    display: block;
+    font-family: "FontAwesome";
+    height: 40px;
+    left: 0;
+    line-height: 40px;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+    width: 40px;
+}
+.product-thumb:hover  .addcart-single.addcart-link {
+	transform: scale(1);
+	-moz-transform: scale(1);
+	-webkit-transform: scale(1);
+}
+
+.product-thumb:hover img {
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15);
+}
+.addcart-single.addcart-link i{
+	margin:0;
+}
+
 /* end contain great-deal */
+
+/* swiper */
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 760px) {
+    .swiper-button-next {
+      right: 20px;
+      transform: rotate(90deg);
+    }
+
+    .swiper-button-prev {
+      left: 20px;
+      transform: rotate(90deg);
+    }
+  }
