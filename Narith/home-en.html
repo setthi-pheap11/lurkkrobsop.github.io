@@ -30,6 +30,7 @@
   </script>
   </head>
   <body>
+    <div id="google_translate_element" style="display:none;"></div>
     <div class="navbar">
       <div class="container">
         <div class="header d-flex w-100">
@@ -61,11 +62,18 @@
                     <a href="#" class="text-nowrap"><img src="images/home/flag-usa.png" alt="" />USA</a>
                   </li>
                   <li>
-                    <a href="#"><img src="images/home/Khmer-flag.png" alt="" />Khmer</a>
+                    <a href="#" onclick="translateToKhmer()"><img src="images/home/Khmer-flag.png" alt="" />Khmer</a>
                   </li>
                 </ul>
-                
+                <script src="js/script.js"></script>
+                <script type="text/javascript">
+                  function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'km'}, 'google_translate_element');
+                  }
+                </script>
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
               </div>
+
               <!-- <div class="dropdown">
                 <div id="google_translate_element"></div>
               </div>
