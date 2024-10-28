@@ -15,19 +15,10 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/home_styles.css" />
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
-    <!-- <script type="text/javascript">
-      function googleTranslateElementInit() {
-          new google.translate.TranslateElement({
-              pageLanguage: 'en',
-              includedLanguages: 'en,km',
-              layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-          }, 'google_translate_element');
-      }
-  </script> -->
+
   <style>
     .skiptranslate{
       display: none;
@@ -39,6 +30,7 @@
   </head>
   <body style="top: 0;">
     <div id="google_translate_element" style="display:none;"></div>
+    <!-- navbar  -->
     <div class="navbar">
       <div class="container">
         <div class="header d-flex w-100">
@@ -52,9 +44,11 @@
             </div>
           </div>
           <div class="cont-rigth top-info w-50">
-            <div
-              class="d-flex justify-content-end align-items-center gap-2 w-100"
-            >
+            <div class="d-flex justify-content-end align-items-center gap-2 w-100">
+              <i class="fa-solid fa-user fs-6 c-A96AE6"></i>
+              <a href="../seller_register/sellerinstruction.html"><span>Seller Register</span></a>
+              <line></line>
+
               <i class="fa-solid fa-user fs-6 c-A96AE6"></i>
               <a href="#"><span>My Account</span></a>
               <line></line>
@@ -62,42 +56,31 @@
               <div class="top-language has-child">
                 <a href="#"class="language-selected d-flex gap-2 align-items-center">
                   <i class="fa-solid fa-earth-americas fs-6 c-A96AE6"></i>
-                  <span>English</span>
-                  <i class="fa-solid fa-chevron-down"></i>
+                  <span id="_lang_used">English</span>
+                  <i class="fa-solid fa-chevron-down"></i> 
                 </a>
                 <ul class="sub-menu-top">
-                  <li onclick="translateToEnglish()" class="t-en bg-A96AE6 text-white">
-                    <span class="text-nowrap"><img src="images/home/flag-usa.png" alt="" />USA</span>
+                  <li onclick="translateToEnglish()" class="t-en bg-A96AE6 c-A96AE6">
+                    <span class="text-nowrap"><img src="images/home/flag-usa.png" alt="" />English</span>
                   </li>
-                  <li onclick="translateToKhmer()" class="t-km">
+                  <li onclick="translateToKhmer()" class="t-km c-A96AE6">
                     <span ><img src="images/home/Khmer-flag.png" alt="" />Khmer</span>
                   </li>
                 </ul>
-                <!-- script -->
-                <script src="js/script.js"></script>
-                <script type="text/javascript">
-                  function googleTranslateElementInit() {
-                    new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,km'}, 'google_translate_element');
-                  }
-                </script>
-                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-                <!-- script -->
+                
 
               </div>
 
               <line></line>
 
               <div class="top-currency has-child">
-                <a
-                  href="#"
-                  class="currency-selected d-flex gap-2 align-items-center"
-                >
+                <a href="#" class="currency-selected d-flex gap-2 align-items-center">
                   <i class="fa fa-usd fs-6 c-A96AE6"></i>
                   <span>USD</span>
                   <i class="fa-solid fa-chevron-down"></i>
                 </a>
                 <ul class="sub-menu-top">
-                  <li>
+                  <li class="bg-A96AE6 text-white">
                     <a href="#"><span class="fs-6">$</span>USD</a>
                   </li>
                   <li>
@@ -114,11 +97,7 @@
               <div class="home_logo">
                 <a href="#" class="d-flex justify-content-start align-items-end"
                   ><img class="mb-2" src="images/home/main_logo.png" alt="" />
-                  <span
-                    class="fs-6 text-white text-norap"
-                    style="margin-left: -20px"
-                    >លក់គ្រប់សព្វ</span
-                  >
+                  <span class="fs-6 text-white text-norap" style="margin-left: -20px">លក់គ្រប់សព្វ</span>
                 </a>
               </div>
             </div>
@@ -134,6 +113,11 @@
               </div>
               <div>
                 <a href="#" class="">
+                  <span class="menu-item">Fashion</span>
+                </a>
+              </div>
+              <div>
+                <a href="#" class="">
                   <span class="menu-item">Electronis</span>
                 </a>
               </div>
@@ -142,17 +126,14 @@
                   <span class="menu-item">Sports</span>
                 </a>
               </div>
+              
               <div>
-                <a href="#" class="">
-                  <span class="menu-item">Fashion</span>
-                </a>
-              </div>
-              <div>
-                <a href="#" class="">
-                  <span class="menu-item"
-                    ><i class="fa-solid fa-magnifying-glass"></i
-                  ></span>
-                </a>
+                <div class="d-flex justify-content-center align-items-center" style="position: relative;">
+                  <input id="_el_search" type="search" class=" form-control rounded-5 fade data-input" data-field="search_value" placeholder="Search Product" />
+                  <span onclick="toggleSlide()" id="_btn_search" class="menu-item ">
+                    <i class="fa-solid fa-magnifying-glass" style="cursor: pointer;"></i>
+                  </span>
+                </div>
               </div>
               <div>
                 <a href="#" class="">
@@ -166,6 +147,7 @@
         </div>
       </div>
     </div>
+    <!-- end navbar  -->
 
     <div class="main-contain">
       <div class="top-contain container 0">
@@ -179,27 +161,22 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="images/slide-show/bn5.jpg" class="d-block w-100" alt="...">
-                <div class="carousel--caption d-none d-md-block">
-                  <h1 style="color: #8D7115; font-weight: 700;">Welcome to our website</h1>
-                  <!-- <p>Some representative placeholder content for the first slide.</p> -->
+                <img src="images/home/slide1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel--caption d-none text-dark d-md-block">
+                  <h2 class="text-uppercase" >headphone bq</h2>
+                  <h4>Paland bentibus & ollieng</h4>
                   <button class="btn btn-outline-dark text-uppercase mt-2">Shop now</button>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="images/slide-show/bn4.jpg" class="d-block w-100" alt="...">
-                <div class="carousel--caption d-none d-md-block">
-                  <h5>Second slide label</h5>
-                  <p>Some representative placeholder content for the second slide.</p>
+                <img src="images/home/slide2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel--caption d-none text-white d-md-block">
+                  <h2 class="text-uppercase">collection shoes</h2>
+                  <h4>Style Of Fanbong 2020</h4>
+                  <button class="btn btn-outline-light text-uppercase mt-2">Shop now</button>
                 </div>
               </div>
-              <div class="carousel-item">
-                <img src="images/slide-show/bn3.jpg" class="d-block w-100" alt="...">
-                <div class="carousel--caption d-none d-md-block">
-                  <h5>Third slide label</h5>
-                  <p>Some representative placeholder content for the third slide.</p>
-                </div>
-              </div>
+
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
               <!-- <span class="carousel-control-prev-icon bg--secondary" aria-hidden="true"> </span> -->
@@ -214,14 +191,14 @@
           </div>
         </div>
         <div class="baner d-flex justify-content-between align-items-center gap-3" >
-          <div class="baner-item col--lg-4">
-            <img src="images/home/ad1.jpg" alt="" class="w-100" />
+          <div class="baner-item item-adv-simple col--lg-4">
+            <a href="#"> <img src="images/home/ad1.jpg" alt="" class="w-100" /></a>
           </div>
-          <div class="baner-item col--lg-4">
-            <img src="images/home/ad2.jpg" alt="" class="w-100" />
+          <div class="baner-item item-adv-simple col--lg-4">
+            <a href="#"> <img src="images/home/ad2.jpg" alt="" class="w-100" /></a>
           </div>
-          <div class="baner-item col--lg-4">
-            <img src="images/home/ad3.jpg" alt="" class="w-100" />
+          <div class="baner-item item-adv-simple col--lg-4">
+            <a href="#"> <img src="images/home/ad3.jpg" alt="" class="w-100" /></a>
           </div>
         </div>
       </div>
@@ -283,35 +260,35 @@
           </div>
           <div class="midle-item w-100 d-flex justify-content-between">
             <div class="cont-left border" style="width: 15%;">
-              <div class="d-block w-100">
+              <div class="featured-list-brand d-block w-100">
                 <a href="#">
                   <img src="images/photos/branch/pn12.png" alt="">
                 </a>
               </div>
-              <div class="d-block w-100">
+              <div class="featured-list-brand d-block w-100">
                 <a href="#">
                   <img src="images/photos/branch/pn4.png" alt="">
                 </a>
               </div>
-              <div class="d-block w-100">
+              <div class="featured-list-brand d-block w-100">
                 <a href="#">
                   <img src="images/photos/branch/pn14.png" alt="">
                 </a>
               </div>
-              <div class="d-block w-100">
+              <div class="featured-list-brand d-block w-100">
                 <a href="#">
                   <img src="images/photos/branch/pn7.png" alt="">
                 </a>
               </div>
-              <div class="d-block w-100">
+              <div class="featured-list-brand d-block w-100">
                 <a href="#">
                   <img src="images/photos/branch/pn1.png" alt="">
                 </a>
               </div>
             </div>
             <div class="cont-center" style="width: 57%;">
-              <div class="top-image w-100 d-block border">
-                <a href="#">
+              <div class="top-image item-adv-simple w-100 d-block border">
+                <a href="#" class="product-thumb-link">
                   <img src="images/home/bn1.jpg" alt="" class="w-100">
                 </a>
               </div>
@@ -374,87 +351,167 @@
                 </div>
               </div>
             </div>
-            <div class="cont-rigth border" style="width: 28%;">
+            <div class="cont-rigth overflow-hidden border" style="width: 28%;">
               <div class="d-block top-title bg-danger p-3">
                 <div class="d-flex justify-content-between">
                   <span class="fs-5 text-white text-uppercase w-75">New Arrivals</span>
                   <div class="w-25 d-flex gap-1 justify-content-end align-items-center">
-                    <button class="border-0 rounded-5 p-0 m-0 bg-danger">
+                    <button class="swiper_new_arrivals-button-prev border-0 rounded-5 p-0 m-0 bg-danger">
                       <i class="fa-solid fa-circle-chevron-left fs-5 bg-dark text-white" style="border-radius:50% ;height: 18px;"></i>
                     </button>
-                    <button class="border-0 rounded-5 p-0 m-0 bg-danger">
+                    <button class="swiper_new_arrivals-button-next border-0 rounded-5 p-0 m-0 bg-danger">
                       <i class="fa-solid fa-circle-chevron-right fs-5 bg-dark text-white" style="border-radius:50% ;height: 18px;"></i>
                     </button>
                   </div>
                 </div>
               </div>
-              <div class="item d-block ps-3 pe-3">
-                <div class="d-flex border-bottom">
-                  <div class="product-thumb item-img">
-                    <a href="#"><img src="images/photos/fashion/5.png" alt=""></a>
-                    <a class="addcart-link addcart-single" href="#"><i class="fa fa-shopping-basket"></i></a>
-                  </div>
-                  <div class="item-text p-3">
-                    <div class="product-sub-info mt-4">
-                      <span class="product-name d-block">Product Name 09</span>
-                      <div class="d-flex gap-3 align-items-center">
-                        <span class="price text-danger fs-5 w-50">$455.99</span>
-                        <del class="price-old text-secondary ">$672.99</del>
+              <div class="swiper_new_arrivals">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide  d-block parent-item">
+                    <div class="item d-block ps-3 pe-3">
+                      <div class="d-flex border-bottom">
+                        <div class="product-thumb item-img">
+                          <a href="#"><img src="images/photos/fashion/5.png" alt=""></a>
+                          <a class="addcart-link addcart-single" href="#"><i class="fa fa-shopping-basket"></i></a>
+                        </div>
+                        <div class="item-text p-3">
+                          <div class="product-sub-info mt-4">
+                            <span class="product-name d-block">Product Name 09</span>
+                            <div class="d-flex gap-3 align-items-center">
+                              <span class="price text-danger fs-5 w-50">$455.99</span>
+                              <del class="price-old text-secondary ">$672.99</del>
+                            </div>
+                            <div class="d-flex mt-3">
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-regular fa-star fs-6 c-A96AE6"></i>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="d-flex mt-3">
-                        <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
-                        <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
-                        <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
-                        <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
-                        <i class="fa-regular fa-star fs-6 c-A96AE6"></i>
+                    </div>
+                    <div class="item d-block ps-3 pe-3">
+                      <div class="d-flex border-bottom">
+                        <div class="product-thumb item-img">
+                          <a href="#"><img src="images/photos/fashion/3.png" alt=""></a>
+                          <a class="addcart-link addcart-single" href="#"><i class="fa fa-shopping-basket"></i></a>
+                        </div>
+                        <div class="item-text p-3">
+                          <div class="product-sub-info mt-4">
+                            <span class="product-name d-block">Product Name 09</span>
+                            <div class="d-flex gap-3 align-items-center">
+                              <span class="price text-danger fs-5 w-50">$455.99</span>
+                              <del class="price-old text-secondary ">$672.99</del>
+                            </div>
+                            <div class="d-flex mt-3">
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-regular fa-star fs-6 c-A96AE6"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item d-block ps-3 pe-3">
+                      <div class="d-flex ">
+                        <div class="product-thumb item-img">
+                          <a href="#"><img src="images/photos/fashion/6.png" alt=""></a>
+                          <a class="addcart-link addcart-single" href="#"><i class="fa fa-shopping-basket"></i></a>
+                        </div>
+                        <div class="item-text p-3">
+                          <div class="product-sub-info mt-4">
+                            <span class="product-name d-block">Product Name 09</span>
+                            <div class="d-flex gap-3 align-items-center">
+                              <span class="price text-danger fs-5 w-50">$455.99</span>
+                              <del class="price-old text-secondary ">$672.99</del>
+                            </div>
+                            <div class="d-flex mt-3">
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-regular fa-star fs-6 c-A96AE6"></i>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="item d-block ps-3 pe-3">
-                <div class="d-flex border-bottom">
-                  <div class="product-thumb item-img">
-                    <a href="#"><img src="images/photos/fashion/3.png" alt=""></a>
-                    <a class="addcart-link addcart-single" href="#"><i class="fa fa-shopping-basket"></i></a>
-                  </div>
-                  <div class="item-text p-3">
-                    <div class="product-sub-info mt-4">
-                      <span class="product-name d-block">Product Name 09</span>
-                      <div class="d-flex gap-3 align-items-center">
-                        <span class="price text-danger fs-5 w-50">$455.99</span>
-                        <del class="price-old text-secondary ">$672.99</del>
-                      </div>
-                      <div class="d-flex mt-3">
-                        <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
-                        <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
-                        <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
-                        <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
-                        <i class="fa-regular fa-star fs-6 c-A96AE6"></i>
+                  <div class="swiper-slide  d-block parent-item">
+                    <div class="item d-block ps-3 pe-3">
+                      <div class="d-flex border-bottom">
+                        <div class="product-thumb item-img">
+                          <a href="#"><img src="images/photos/fashion/11.png" alt=""></a>
+                          <a class="addcart-link addcart-single" href="#"><i class="fa fa-shopping-basket"></i></a>
+                        </div>
+                        <div class="item-text p-3">
+                          <div class="product-sub-info mt-4">
+                            <span class="product-name d-block">Product Name 09</span>
+                            <div class="d-flex gap-3 align-items-center">
+                              <span class="price text-danger fs-5 w-50">$455.99</span>
+                              <del class="price-old text-secondary ">$672.99</del>
+                            </div>
+                            <div class="d-flex mt-3">
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-regular fa-star fs-6 c-A96AE6"></i>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item d-block ps-3 pe-3">
-                <div class="d-flex ">
-                  <div class="product-thumb item-img">
-                    <a href="#"><img src="images/photos/fashion/6.png" alt=""></a>
-                    <a class="addcart-link addcart-single" href="#"><i class="fa fa-shopping-basket"></i></a>
-                  </div>
-                  <div class="item-text p-3">
-                    <div class="product-sub-info mt-4">
-                      <span class="product-name d-block">Product Name 09</span>
-                      <div class="d-flex gap-3 align-items-center">
-                        <span class="price text-danger fs-5 w-50">$455.99</span>
-                        <del class="price-old text-secondary ">$672.99</del>
+                    <div class="item d-block ps-3 pe-3">
+                      <div class="d-flex border-bottom">
+                        <div class="product-thumb item-img">
+                          <a href="#"><img src="images/photos/fashion/12.png" alt=""></a>
+                          <a class="addcart-link addcart-single" href="#"><i class="fa fa-shopping-basket"></i></a>
+                        </div>
+                        <div class="item-text p-3">
+                          <div class="product-sub-info mt-4">
+                            <span class="product-name d-block">Product Name 09</span>
+                            <div class="d-flex gap-3 align-items-center">
+                              <span class="price text-danger fs-5 w-50">$455.99</span>
+                              <del class="price-old text-secondary ">$672.99</del>
+                            </div>
+                            <div class="d-flex mt-3">
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-regular fa-star fs-6 c-A96AE6"></i>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="d-flex mt-3">
-                        <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
-                        <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
-                        <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
-                        <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
-                        <i class="fa-regular fa-star fs-6 c-A96AE6"></i>
+                    </div>
+                    <div class="item d-block ps-3 pe-3">
+                      <div class="d-flex ">
+                        <div class="product-thumb item-img">
+                          <a href="#"><img src="images/photos/fashion/13.png" alt=""></a>
+                          <a class="addcart-link addcart-single" href="#"><i class="fa fa-shopping-basket"></i></a>
+                        </div>
+                        <div class="item-text p-3">
+                          <div class="product-sub-info mt-4">
+                            <span class="product-name d-block">Product Name 09</span>
+                            <div class="d-flex gap-3 align-items-center">
+                              <span class="price text-danger fs-5 w-50">$455.99</span>
+                              <del class="price-old text-secondary ">$672.99</del>
+                            </div>
+                            <div class="d-flex mt-3">
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-regular fa-star fs-6 c-A96AE6"></i>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -464,11 +521,11 @@
           </div>
         </div>
         <div class="bottom-item d-flex justify-content-between align-items-center mt-4" >
-          <div class="baner-item ">
-            <img src="images/home/ad4.jpg" alt="" class="w-100" />
+          <div class="baner-item item-adv-simple ">
+            <a href="#"> <img src="images/home/ad4.jpg" alt="" class="w-100" /></a>
           </div>
-          <div class="baner-item ">
-            <img src="images/home/ad5.jpg" alt="" class="w-100" />
+          <div class="baner-item item-adv-simple ">
+            <a href="#"> <img src="images/home/ad5.jpg" alt="" class="w-100" /></a>
           </div>
         </div>
       </div>
@@ -530,34 +587,34 @@
           </div>
           <div class="midle-item w-100 d-flex justify-content-between">
             <div class="cont-left border" style="width: 15%;">
-              <div class="d-block w-100">
+              <div class="featured-list-brand d-block w-100">
                 <a href="#">
                   <img src="images/photos/branch/pn12.png" alt="">
                 </a>
               </div>
-              <div class="d-block w-100">
+              <div class="featured-list-brand d-block w-100">
                 <a href="#">
                   <img src="images/photos/branch/pn4.png" alt="">
                 </a>
               </div>
-              <div class="d-block w-100">
+              <div class="featured-list-brand d-block w-100">
                 <a href="#">
                   <img src="images/photos/branch/pn14.png" alt="">
                 </a>
               </div>
-              <div class="d-block w-100">
+              <div class="featured-list-brand d-block w-100">
                 <a href="#">
                   <img src="images/photos/branch/pn7.png" alt="">
                 </a>
               </div>
-              <div class="d-block w-100">
+              <div class="featured-list-brand d-block w-100">
                 <a href="#">
                   <img src="images/photos/branch/pn1.png" alt="">
                 </a>
               </div>
             </div>
             <div class="cont-center" style="width: 57%;">
-              <div class="top-image w-100 d-block border">
+              <div class="top-image item-adv-simple w-100 d-block border">
                 <a href="#">
                   <img src="images/home/bn3.jpg" alt="" class="w-100">
                 </a>
@@ -573,7 +630,7 @@
                     </div>
                     <div class="product-sub-info mt-3">
                       <span class="product-name d-block">Product Name 03</span>
-                      <span class="price text-danger fs-5 d-block">$455.99</span>
+                      <span class="price text-info fs-5 d-block">$455.99</span>
                       <del class="price-old text-secondary d-block">$842.00</del>
                       <div class="d-flex mt-2">
                         <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
@@ -601,7 +658,7 @@
                     </div>
                     <div class="product-sub-info mt-3">
                       <span class="product-name d-block">Product Name 06</span>
-                      <span class="price text-danger fs-5 d-block">$455.99</span>
+                      <span class="price text-info fs-5 d-block">$455.99</span>
                       <del class="price-old text-secondary d-block">$546.90</del>
                       <div class="d-flex mt-2">
                         <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
@@ -621,87 +678,167 @@
                 </div>
               </div>
             </div>
-            <div class="cont-rigth border" style="width: 28%;">
+            <div class="cont-rigth overflow-hidden border" style="width: 28%;">
               <div class="d-block top-title bg-info p-3">
                 <div class="d-flex justify-content-between">
                   <span class="fs-5 text-white text-uppercase w-75">New Arrivals</span>
                   <div class="w-25 d-flex gap-1 justify-content-end align-items-center">
-                    <button class="border-0 rounded-5 p-0 m-0 bg-info">
+                    <button class="swiper_new_arrivals-button-prev border-0 rounded-5 p-0 m-0 bg-info">
                       <i class="fa-solid fa-circle-chevron-left fs-5 bg-dark text-white" style="border-radius:50% ;height: 18px;"></i>
                     </button>
-                    <button class="border-0 rounded-5 p-0 m-0 bg-info">
+                    <button class="swiper_new_arrivals-button-next border-0 rounded-5 p-0 m-0 bg-info">
                       <i class="fa-solid fa-circle-chevron-right fs-5 bg-dark text-white" style="border-radius:50% ;height: 18px;"></i>
                     </button>
                   </div>
                 </div>
               </div>
-              <div class="item d-block ps-3 pe-3">
-                <div class="d-flex border-bottom">
-                  <div class="product-thumb item-img">
-                    <a href="#"><img src="images/photos/mobile/11.jpg" alt=""></a>
-                    <a class="addcart-link addcart-single" href="#"><i class="fa fa-shopping-basket"></i></a>
-                  </div>
-                  <div class="item-text p-3">
-                    <div class="product-sub-info mt-4">
-                      <span class="product-name d-block">Product Name 09</span>
-                      <div class="d-flex gap-3 align-items-center">
-                        <span class="price text-danger fs-5 w-50">$455.99</span>
-                        <del class="price-old text-secondary ">$672.99</del>
+              <div class="swiper_new_arrivals w-100">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide d-block parent-item">
+                    <div class="item d-block ps-3 pe-3">
+                      <div class="d-flex border-bottom">
+                        <div class="product-thumb item-img">
+                          <a href="#"><img src="images/photos/mobile/11.jpg" alt=""></a>
+                          <a class="addcart-link addcart-single" href="#"><i class="fa fa-shopping-basket"></i></a>
+                        </div>
+                        <div class="item-text p-3">
+                          <div class="product-sub-info mt-4">
+                            <span class="product-name d-block">Product Name 09</span>
+                            <div class="d-flex gap-3 align-items-center">
+                              <span class="price text-info fs-5 w-50">$455.99</span>
+                              <del class="price-old text-secondary ">$672.99</del>
+                            </div>
+                            <div class="d-flex mt-3">
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-regular fa-star fs-6 c-A96AE6"></i>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="d-flex mt-3">
-                        <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
-                        <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
-                        <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
-                        <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
-                        <i class="fa-regular fa-star fs-6 c-A96AE6"></i>
+                    </div>
+                    <div class="item d-block ps-3 pe-3">
+                      <div class="d-flex border-bottom">
+                        <div class="product-thumb item-img">
+                          <a href="#"><img src="images/photos/mobile/10.jpg" alt=""></a>
+                          <a class="addcart-link addcart-single" href="#"><i class="fa fa-shopping-basket"></i></a>
+                        </div>
+                        <div class="item-text p-3">
+                          <div class="product-sub-info mt-4">
+                            <span class="product-name d-block">Product Name 09</span>
+                            <div class="d-flex gap-3 align-items-center">
+                              <span class="price text-info fs-5 w-50">$455.99</span>
+                              <del class="price-old text-secondary ">$672.99</del>
+                            </div>
+                            <div class="d-flex mt-3">
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-regular fa-star fs-6 c-A96AE6"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item d-block ps-3 pe-3">
+                      <div class="d-flex ">
+                        <div class="product-thumb item-img">
+                          <a href="#"><img src="images/photos/mobile/6.jpg" alt=""></a>
+                          <a class="addcart-link addcart-single" href="#"><i class="fa fa-shopping-basket"></i></a>
+                        </div>
+                        <div class="item-text p-3">
+                          <div class="product-sub-info mt-4">
+                            <span class="product-name d-block">Product Name 09</span>
+                            <div class="d-flex gap-3 align-items-center">
+                              <span class="price text-info fs-5 w-50">$455.99</span>
+                              <del class="price-old text-secondary ">$672.99</del>
+                            </div>
+                            <div class="d-flex mt-3">
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-regular fa-star fs-6 c-A96AE6"></i>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="item d-block ps-3 pe-3">
-                <div class="d-flex border-bottom">
-                  <div class="product-thumb item-img">
-                    <a href="#"><img src="images/photos/mobile/10.jpg" alt=""></a>
-                    <a class="addcart-link addcart-single" href="#"><i class="fa fa-shopping-basket"></i></a>
-                  </div>
-                  <div class="item-text p-3">
-                    <div class="product-sub-info mt-4">
-                      <span class="product-name d-block">Product Name 09</span>
-                      <div class="d-flex gap-3 align-items-center">
-                        <span class="price text-danger fs-5 w-50">$455.99</span>
-                        <del class="price-old text-secondary ">$672.99</del>
-                      </div>
-                      <div class="d-flex mt-3">
-                        <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
-                        <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
-                        <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
-                        <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
-                        <i class="fa-regular fa-star fs-6 c-A96AE6"></i>
+                  <div class="swiper-slide d-block parent-item">
+                    <div class="item d-block ps-3 pe-3">
+                      <div class="d-flex border-bottom">
+                        <div class="product-thumb item-img">
+                          <a href="#"><img src="images/photos/mobile/7.jpg" alt=""></a>
+                          <a class="addcart-link addcart-single" href="#"><i class="fa fa-shopping-basket"></i></a>
+                        </div>
+                        <div class="item-text p-3">
+                          <div class="product-sub-info mt-4">
+                            <span class="product-name d-block">Product Name 09</span>
+                            <div class="d-flex gap-3 align-items-center">
+                              <span class="price text-info fs-5 w-50">$455.99</span>
+                              <del class="price-old text-secondary ">$672.99</del>
+                            </div>
+                            <div class="d-flex mt-3">
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-regular fa-star fs-6 c-A96AE6"></i>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item d-block ps-3 pe-3">
-                <div class="d-flex ">
-                  <div class="product-thumb item-img">
-                    <a href="#"><img src="images/photos/mobile/6.jpg" alt=""></a>
-                    <a class="addcart-link addcart-single" href="#"><i class="fa fa-shopping-basket"></i></a>
-                  </div>
-                  <div class="item-text p-3">
-                    <div class="product-sub-info mt-4">
-                      <span class="product-name d-block">Product Name 09</span>
-                      <div class="d-flex gap-3 align-items-center">
-                        <span class="price text-danger fs-5 w-50">$455.99</span>
-                        <del class="price-old text-secondary ">$672.99</del>
+                    <div class="item d-block ps-3 pe-3">
+                      <div class="d-flex border-bottom">
+                        <div class="product-thumb item-img">
+                          <a href="#"><img src="images/photos/mobile/8.jpg" alt=""></a>
+                          <a class="addcart-link addcart-single" href="#"><i class="fa fa-shopping-basket"></i></a>
+                        </div>
+                        <div class="item-text p-3">
+                          <div class="product-sub-info mt-4">
+                            <span class="product-name d-block">Product Name 09</span>
+                            <div class="d-flex gap-3 align-items-center">
+                              <span class="price text-info fs-5 w-50">$455.99</span>
+                              <del class="price-old text-secondary ">$672.99</del>
+                            </div>
+                            <div class="d-flex mt-3">
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-regular fa-star fs-6 c-A96AE6"></i>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="d-flex mt-3">
-                        <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
-                        <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
-                        <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
-                        <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
-                        <i class="fa-regular fa-star fs-6 c-A96AE6"></i>
+                    </div>
+                    <div class="item d-block ps-3 pe-3">
+                      <div class="d-flex ">
+                        <div class="product-thumb item-img">
+                          <a href="#"><img src="images/photos/mobile/12.jpg" alt=""></a>
+                          <a class="addcart-link addcart-single" href="#"><i class="fa fa-shopping-basket"></i></a>
+                        </div>
+                        <div class="item-text p-3">
+                          <div class="product-sub-info mt-4">
+                            <span class="product-name d-block">Product Name 09</span>
+                            <div class="d-flex gap-3 align-items-center">
+                              <span class="price text-info fs-5 w-50">$455.99</span>
+                              <del class="price-old text-secondary ">$672.99</del>
+                            </div>
+                            <div class="d-flex mt-3">
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-solid fa-star fs-6 c-A96AE6"></i>
+                              <i class="fa-regular fa-star fs-6 c-A96AE6"></i>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -711,11 +848,11 @@
           </div>
         </div>
         <div class="bottom-item d-flex justify-content-between align-items-center mt-4" >
-          <div class="baner-item ">
-            <img src="images/home/ad8.jpg" alt="" class="w-100" />
+          <div class="baner-item item-adv-simple "> 
+            <a href="#"> <img src="images/home/ad8.jpg" alt="" class="w-100" /></a>
           </div>
-          <div class="baner-item ">
-            <img src="images/home/ad9.jpg" alt="" class="w-100" />
+          <div class="baner-item item-adv-simple ">
+            <a href="#"> <img src="images/home/ad9.jpg" alt="" class="w-100" /></a>
           </div>
         </div>
       </div>
@@ -1080,6 +1217,7 @@
 					</div>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
+          
 				</div>	
 			</div>
 			<!-- End Great Deal -->
@@ -1121,17 +1259,35 @@
           },
         });
 
+        
+
+        var swiper_new_arrivals = new Swiper('.swiper_new_arrivals', {
+          slidesPerView: 1,
+          direction: getDirection(),
+          navigation: {
+            nextEl: '.swiper_new_arrivals-button-next',
+            prevEl: '.swiper_new_arrivals-button-prev',
+          },
+          on: {
+            resize: function () {
+              // swiper_new_arrivals.changeDirection();
+            },
+          },
+        });
+
         function getDirection() {
           var windowWidth = window.innerWidth;
           var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
 
           return direction;
         }
+
       </script>
       <!--end Swiper -->
 
     </div>
 
+    <!-- footer -->
     <div class="footer">
       <div class="container d-flex">
         <div class="cont-left w-75">
@@ -1142,9 +1298,7 @@
             Help Center
           </span>
         </div>
-        <div
-          class="cont-rigth d-flex justify-content-end align-items-center gap-3 fs-1 w-25"
-        >
+        <div class="cont-rigth d-flex justify-content-end align-items-center gap-3 fs-1 w-25">
           <div class="icon-facebook">
             <i class="fa-brands fa-facebook text-white"></i>
           </div>
@@ -1159,8 +1313,18 @@
         </div>
       </div>
     </div>
+    <!-- end footer -->
 
     <!-- Bootstrap JS Bundle (includes Popper) -->
+    <!-- script -->
+    <script src="js/script.js"></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,km'}, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- script -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
