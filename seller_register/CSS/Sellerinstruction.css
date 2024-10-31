@@ -15,6 +15,7 @@ header {
     color: #000000;
     padding: 20px;
     text-align: left;
+    overflow: hidden;
 }
 
 .title1, .title2 {
