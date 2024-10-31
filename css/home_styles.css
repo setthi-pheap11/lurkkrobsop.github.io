@@ -73,6 +73,12 @@ line {
   width: 0px;
   border: 0.5px solid #d9d9d9;
 }
+
+.navbar .menu-item:hover{
+  cursor: pointer;
+  color: #A96AE6;
+}
+
 .c-A96AE6 {
   color: #a96ae6;
 }
@@ -212,6 +218,22 @@ ul {
   z-index: 9;
 }
 
+.contain {
+  height: 0;
+  opacity: 0;
+  /* display: none; */
+  transition: height 0.5s ease-in-out, opacity 0.8s ease-in-out;
+  overflow: hidden;
+}
+.contain.default {
+  opacity: 1;
+  height: 100%;
+}
+.contain.show {
+  height: 100%; /* Adjust the width as needed */
+  opacity: 1;
+  /* display: block; */
+}
 
 .menu .contain-menu {
   color: #ffffff;
@@ -220,7 +242,7 @@ ul {
 .menu .contain-menu span {
   font-size: 18px;
 }
-.menu .contain-menu .active {
+.navbar .menu-item.active {
   color: #a96ae6;
 }
 .footer {

@@ -1,0 +1,22 @@
+
+
+.left-fashion-info {
+    width: 25%;
+}
+.right-fashion-info {
+    width: 75%;
+}
+.check-bar{
+    margin: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #dee2e6;
+}
+.check-bar h5{
+    font-weight: 600;
+}
+.check-bar form label{
+    font-size: 14px;
+    font-weight: 200;
+    margin-left: 8px;
+    line-height: 25px;
+}

@@ -1,3 +1,5 @@
+let lastContain = '';
+
 function translateToKhmer() {
   // Find the hidden Google Translate dropdown
   var selectField = document.querySelector('.goog-te-combo');
@@ -60,14 +62,28 @@ function toggleSlide() {
 
 function showContainer(container) {
   let containers = document.querySelectorAll('.contain');
+  let menus = document.querySelectorAll('.menu-item');
   // Hide all slides
   console.log(123,container);
   containers.forEach(contain => {
   console.log(222,contain.id);
 
-    if(contain.id === container)
-    contain.style.display = 'block';
+    if(contain.id === container){
+      contain.classList.add('show')
+      // contain.classList.remove('defult')
+    }
+    else{
+      contain.classList.remove('show')
+      contain.classList.remove('default')
+    }
+  });
+
+  menus.forEach(menu => {
+  console.log(333,menu.id);
+
+    if(menu.id === container.split('-')[0])
+      menu.classList.add('active');
     else
-    contain.style.display = 'none';
+      menu.classList.remove('active');
   });
 }
