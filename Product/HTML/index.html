@@ -1,13 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/Product/CSS/style.css">
-</head>
-<body>
-    <h1 id="text">Welcome to Product Section </h1>
-</body>
-<script src="/Product/Javascript/index.js"></script>
+    <link rel="stylesheet" href="/Product/CSS/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="headers">
+        <div class="header_left">
+          <div class="left">
+            <img src="/Product/image/asscall.png" alt="" />
+            <a href="">ទូរស៏ព្ទទៅ 24/7: 00000000</a>
+          </div>
+
+          <div class="left">
+            <img src="/Product/image/assabout.png" alt="" />
+            <a href=""> អំពីយើង</a>
+          </div>
+        </div>
+
+        <div class="header_left">
+          <div class="left">
+            <img src="/Product/image/account.png" alt="" />
+            <a href="">គណនីរបស់ខ្ញុំ</a>
+          </div>
+
+          <div class="left">
+            <img src="/Product/image/earth.png" alt="" />
+            <a href="">ភាសាខ្មែរ</a>
+          </div>
+          <div class="left">
+            <img src="/Product/image/dollar.png" alt="" />
+            <a href="">ដុល្លារ</a>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper">
+        <ul>
+          <li>
+            <a href=""
+              ><img src="/Product/image/logogroub.png" alt="" id="logo"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_basic_html"
+              >ផ្ទាំំងដើម</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_basic_html"
+              >អេឡិចត្រុង</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_basic_html"
+              >កីឡា</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_basic_html"
+              >ម៉ូត</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><img src="/Product/image/Vector.png" alt="" id="navicon"
+            /></a>
+          </li>
+          <li>
+            <a href="https://youtu.be/qx_hDEzI7R0?list=RDqx_hDEzI7R0"
+              ><img src="/Product/image/cart.png" alt="" id="navicon"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- hero section -->
+    <section class="slider">
+      <div class="slider-container">
+        <div class="slides">
+          <img src="/Product/image/discount.png" alt="Slide 1" class="slide" />
+          <img src="/Product/image/slide1.png" alt="Slide 2" class="slide" />
+          <img src="/Product/image/slide2.png" alt="Slide 3" class="slide" />
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        <div class="indicators">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- food section -->
+
+    <section class="product">
+      <div class="title">
+        <p class="pborder">Food</p>
+        <a href="">See more &rightarrow;</a>
+      </div>
+      <!-- drink Section -->
+      <div class="food"></div>
+    </section>
+    <!-- drink section -->
+    <section class="product">
+      <div class="title">
+        <p class="pborder">drink</p>
+        <a href="">See more &rightarrow;</a>
+      </div>
+      <div class="drink"></div>
+    </section>
+
+     <!-- cloth section -->
+     <section class="product">
+      <div class="title">
+        <p class="pborder">Cloth</p>
+        <a href="">See more &rightarrow;</a>
+      </div>
+      <div class="cloth"></div>
+    </section>
+
+     <!-- Accesory section -->
+     <section class="product">
+      <div class="title">
+        <p class="pborder">Accesorries</p>
+        <a href="">See more &rightarrow;</a>
+      </div>
+      <div class="acceserry"></div>
+    </section>
+
+
+     <!-- shoe section -->
+     <section class="product">
+      <div class="title">
+        <p class="pborder">Shoe</p>
+        <a href="">See more &rightarrow;</a>
+      </div>
+      <div class="shoe"></div>
+    </section>
+
+     <!-- Skin care section -->
+     <section class="product">
+      <div class="title">
+        <p class="pborder">Skin Care</p>
+        <a href="">See more &rightarrow;</a>
+      </div>
+      <div class="skincare"></div>
+    </section>
+
+     <!-- electronic section -->
+     <section class="product">
+      <div class="title">
+        <p class="pborder">Electronic</p>
+        <a href="">See more &rightarrow;</a>
+      </div>
+      <div class="electronic"></div>
+    </section>
+  </body>
+  <script src="/Product/Javascript/index.js"></script>
 </html>
