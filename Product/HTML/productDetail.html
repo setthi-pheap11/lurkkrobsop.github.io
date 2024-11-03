@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Detail</title>
+  <style>
+    .product-detail { max-width: 600px; margin: auto; border: 1px solid #ddd; padding: 20px; }
+  </style>
+</head>
+<body>
+  <div class="product-detail">
+    <!-- Product details will be inserted here -->
+  </div>
+
+  <script>
+    // Sample product data
+    const products = [
+      { id: '1', name: 'Smartphone', shop: 'TechStore', openTime: '9 AM - 9 PM', price: '$499', image: 'smartphone.jpg', description: 'A high-end smartphone with amazing features.' },
+      { id: '2', name: 'Laptop', shop: 'TechStore', openTime: '9 AM - 9 PM', price: '$899', image: 'laptop.jpg', description: 'A powerful laptop suitable for all your needs.' },
+      { id: '3', name: 'Smartwatch', shop: 'WatchWorld', openTime: '10 AM - 8 PM', price: '$199', image: 'smartwatch.jpg', description: 'A stylish smartwatch to track your activities.' }
+    ];
+
+    // Get product ID from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
+
+    // Find the specific product based on the ID
+    const product = products.find(p => p.id === productId);
+
+    // Render product details on the page
+    if (product) {
+      document.querySelector(".product-detail").innerHTML = `
+        <img src="${product.image}" alt="${product.name}" width="200">
+        <h1>${product.name}</h1>
+        <p>Shop: ${product.shop}</p>
+        <p>Open: ${product.openTime}</p>
+        <p>Price: ${product.price}</p>
+        <p>${product.description}</p>
+        <button class="add-to-cart">Add To Cart</button>
+      `;
+    } else {
+      document.querySelector(".product-detail").innerHTML = "<p>Product not found.</p>";
+    }
+  </script>
+</body>
+</html>
