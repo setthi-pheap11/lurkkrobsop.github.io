@@ -84,7 +84,7 @@ line {
 }
 
 .bg-A96AE6 {
-  background-color: #a96ae6;
+  background-color: #a96ae6 !important;
   color: white !important;
 }
 

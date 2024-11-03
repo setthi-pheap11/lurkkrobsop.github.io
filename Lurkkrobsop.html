@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="seller_register/CSS/Sellerinstruction.css">
     <link rel="stylesheet" href="css/home_styles.css" />
     <link rel="stylesheet" href="css/fashion.css" />
+    <link rel="stylesheet" href="css/test.css" />
 
 
   <style>
@@ -41,7 +42,8 @@
     <div id="electronis-container" class="contain">Electronis Container </div>
     <div id="sports-container" class="contain" >Sports Container </div>
     <div id="shopping-container" class="contain" >shopping Container </div>
-    <div id="test-container" class="contain" >test Container </div>
+    <div id="test-container" class="contain " >test Container </div>
+   
 
     <div id="footer-container"></div> <!-- footer-container must be here -->
     <script>
@@ -112,6 +114,19 @@
         })
         .then(data => {
           document.getElementById('sellerinstruction-container').innerHTML = data;
+        })
+        .catch(error => console.error(error));
+
+        // Fetch test instructions
+      fetch('./pages/test.html')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Error fetching seller instructions: ' + response.status);
+          }
+          return response.text();
+        })
+        .then(data => {
+          document.getElementById('test-container').innerHTML = data;
         })
         .catch(error => console.error(error));
 
