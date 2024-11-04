@@ -20,3 +20,60 @@
     margin-left: 8px;
     line-height: 25px;
 }
+.check-bar .colorbox{
+    width: 25px;
+    height: 25px;
+}
+
+.check-bar .input-filter{
+    border: 1px solid #dee2e6;
+}
+
+.baner-img{
+    position: relative;
+    overflow: hidden;
+}
+.baner-img img{
+    transition: transform .5s; /* Animation */
+}
+.baner-img:hover img{
+    transform: scale(1.15);
+}
+.baner-img .baner-img-text{
+    background: #ffffff8a;
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    width: 100%;
+    left: 0;
+}
+
+.rounded-1{
+    border-radius: .5rem !important;
+}
+.rounded-2{
+    border-radius: 1rem !important;
+}
+.rounded-3{
+    border-radius: 1.5rem !important;
+}
+.rounded-4{
+    border-radius: 3rem !important;
+}
+.rounded-5{
+    border-radius: 5rem !important;
+}
+.bg-home {
+    background-color: #a96ae6 !important;
+    color: white !important;
+}
+.catagory .catagory-item:hover span{
+    color: rgb(209, 66, 66);
+}
+.catagory .catagory-item .qty{
+    width: 28px;
+    text-align: center;
+}
+.catagory .catagory-item:hover .qty{
+    background-color: rgb(209, 66, 66) !important;
+}

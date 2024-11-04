@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="seller_register/CSS/Sellerinstruction.css">
     <link rel="stylesheet" href="css/home_styles.css" />
     <link rel="stylesheet" href="css/fashion.css" />
+    <link rel="stylesheet" href="css/test.css" />
+    <link rel="stylesheet" href="css/product.css" />
 
 
   <style>
@@ -31,17 +33,19 @@
     }
   </style>
   </head>
-  <body style="top: 0;">
+  <body style="top: 0;">  
     <div id="google_translate_element" style="display:none;"></div>
     <div id="header-container"></div> <!-- header-container must be here -->
 
     <div id="sellerinstruction-container" class="contain ">Sellerinstruction</div>
-    <div id="home-container" class="contain default">Home Container</div>
-    <div id="fashion-container" class="contain " >Fashion Container </div>
+    <div id="home-container" class="contain ">Home Container</div>
+    <div id="fashion-container" class="contain default" >Fashion Container </div>
     <div id="electronis-container" class="contain">Electronis Container </div>
     <div id="sports-container" class="contain" >Sports Container </div>
     <div id="shopping-container" class="contain" >shopping Container </div>
-    <div id="test-container" class="contain" >test Container </div>
+    <div id="test-container" class="contain " >test Container </div>
+    <div id="product-container" class="contain " >product Container </div>
+   
 
     <div id="footer-container"></div> <!-- footer-container must be here -->
     <script>
@@ -112,6 +116,34 @@
         })
         .then(data => {
           document.getElementById('sellerinstruction-container').innerHTML = data;
+        })
+        .catch(error => console.error(error));
+
+        // Fetch test instructions
+      fetch('./pages/test.html')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Error fetching seller instructions: ' + response.status);
+          }
+          return response.text();
+        })
+        .then(data => {
+          document.getElementById('test-container').innerHTML = data;
+        })
+        .catch(error => console.error(error));
+      
+      fetch('./pages/product.html')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Error fetching seller instructions: ' + response.status);
+          }
+          return response.text();
+        })
+        .then(data => {
+          document.getElementById('product-container').innerHTML = data;
+          const script = document.createElement('script');
+          script.src = 'js/product.js';  // Path to your Swiper JS file
+          document.body.appendChild(script);  // Append the script to the body or head
         })
         .catch(error => console.error(error));
 
