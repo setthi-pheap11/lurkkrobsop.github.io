@@ -1,5 +1,5 @@
 .register-form {
-    width: 1000px;
+    width: 700px;
     margin: 0 auto;
     padding: 20px;
     font-family: 'Khmer OS Siemreap', sans-serif;
@@ -46,4 +46,49 @@
 
 .register-form input[type="submit"]:hover {
     background-color: #45a049;
+}
+
+.sP {
+    /* text-align: center; */
+    font-size: 15px;
+    color: #333;
+    /* margin-right: 200px; */
+}
+.lets {
+    /* text-align: center; */
+ width: 20px;
+    color: #333;
+    /* margin-bottom: -5px; */
+}
+.lep {
+    /* text-align: center; */
+ width: 16px;
+    color: #333;
+    /* margin-bottom: -5px; */
+}
+
+
+.more_then {
+    text-align: center;
+    font-size: 15px;
+    color: #333;
+    /* margin-top: -50px; */
+}
+.sD {
+  
+    font-size: 15px;
+    color: #00000044;
+    /* margin-right: 200px;
+    margin-top: -55px; */
+
+}
+.sP, .sD {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.groupS {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
