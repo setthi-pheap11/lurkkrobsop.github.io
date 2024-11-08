@@ -16,34 +16,78 @@
         <h2>ចុះឈ្មោះជាអ្នកលក់នៅក្នុងLURKKORBSOP</h2>
         <hr>
             <div class="groupS">
-                <h3 class="sP">
-                    <img src="icon/lets-icons_done-duotone.svg" class="lets">ព័ត៌មានផ្ទាល់ខ្លួន
-                </h3>
-                <h3 class="more_then">
-                    <h2>></h2>
-                </h3>
-                <h3 class="sD">
+                <p class="sP">
+                    <img src="icon/lets-icons_done-duotone.svg" class="lets">
+                    <span>ព័ត៌មានផ្ទាល់ខ្លួន</span>
+                </p>
+                <p class="more_then">
+                    <p>></p>
+                </p>
+                <p class="sD">
                     <img src="icon/Group 427319148.svg" class="lep">
                     <span>ព័ត៌មានផ្ទាល់ខ្លួន</span>
-                </h3>
+                </p>
 
             </div>
             <hr>
         <form action="/submit_registration" method="post">
             
             <label for="name">ថ្ងៃខែឆ្នាំកំណើត</label>
-         
-            <input type="text" id="name" name="name" required><br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br><br>
-            
-            <label for="confirm-password">Confirm Password:</label>
-            <input type="password" id="confirm-password" name="confirm-password" required><br><br>
-            
-            <input type="submit" value="Register">
+            <input type="text" id="name" name="name" placeholder="ថ្ងៃ">
+            <input type="text" id="name" name="name" placeholder="ខែ">
+            <input type="text" id="name" name="name" placeholder="ឆ្នាំ" >
+            <p class="per">សូមបញ្ចូលថ្ងៃខែឆ្នាំកំណើតរបស់អ្នកដែលត្រូវនឹងឯកសារអត្តសញ្ញាណរបស់អ្នក។ អ្នកត្រូវតែមានយ៉ាងហោចណាស់ ១៨​ ឆ្នាំឡើងទៅដើម្បីលក់នៅ</p>
+            <label for="email">លេខអត្តសញ្ញាណជាតិ (ជាជម្រើស)</label>
+            <input type="email"  placeholder="លេខអត្តសញ្ញាណជាតិ"><br><br>
+            <!-- test -->
+            <label for="email">លេខចុះបញ្ជីពន្ធ (ជាជម្រើស)</label>
+            <div class="phone-input-container">
+                <div class="custom-select">
+                  <div class="flag-container">
+                    <img src="image/Cambodia.png" alt="Cambodia Flag" class="flag-icon" />
+                    <span class="country-code">+855</span>
+                  </div>
+                  <select id="country-code-select" onchange="updateCountryCode()">
+                    <option value="+855" selected>+855</option>
+                    <option value="+1">+1</option>
+                    <option value="+44">+44</option>
+                    <!-- Add more country codes here -->
+                  </select>
+                </div>
+                <input type="tel" placeholder="បញ្ចូលលេខទូរសព្ទ" class="phone-input" />
+              </div>
+              <!-- test -->
+              <hr>
+              <div>
+                <h2>អាស័យដ្ឋានចេញវិក្កយប័ត្រ</h2>
+                <label for="email">អាស័យដ្ខាន​</label>
+                <input type="email"  placeholder="អាស័យដ្ខានទី​  ១">
+                <input type="email"  placeholder="អាស័យដ្ខានទី​  ២"><br><br>
+              </div>
+              <div>
+                <label for="email">ទីក្រុង​</label>
+                <input type="email"  placeholder="ទីក្រុង">
+              </div>
+              <div>
+                <label for="email">ខេត្ត/លេខកូដប្រៃសណីយ៍​</label>
+                <div class="phone-input-container">
+                    <div class="custom-select">
+                      <div class="flag-container">
+                        <span class="country-code">ជ្រើសរើស</span>
+                      </div>
+                      <select id="country-code-select" onchange="updateCountryCode()">
+                        <option value="+855" selected>ភ្នំពេញ</option>
+                        <option value="+1">កណ្ដាល</option>
+                        <option value="+44">ព្រៃវែង</option>
+                        <!-- Add more country codes here -->
+                      </select>
+                    </div>
+                    <input type="tel" placeholder="ភ្នំពេញ" class="phone-input" />
+                  </div>
+              </div>
+             
+            <input class="backS" type="submit" value="ថយក្រោយ">
+            <input class="submitS"type="submit" value="បន្ទាប់">
         </form>
     </div>
 </body>
