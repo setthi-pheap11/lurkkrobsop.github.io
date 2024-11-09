@@ -67,6 +67,17 @@
     background-color: #a96ae6 !important;
     color: white !important;
 }
+.bg-grid {
+    background-color: #a96ae6 !important;
+    color: white !important;
+}
+.bg-list {
+    color: #a96ae6 !important;
+    background-color: white !important;
+}
+.text-home {
+    color: #a96ae6 !important;
+}
 .catagory .catagory-item:hover span{
     color: rgb(209, 66, 66);
 }
@@ -76,4 +87,155 @@
 }
 .catagory .catagory-item:hover .qty{
     background-color: rgb(209, 66, 66) !important;
+}
+
+#fashion-container .row {
+    margin-right: -11px;
+    margin-left: -11px;
+}
+
+.contain-grid, .contain-list {
+    /* height: 0; */
+    /* opacity: 0; */
+    display: none;
+    /* transition: height 0.5s ease-in-out, opacity 0.8s ease-in-out; */
+    overflow: hidden;
+}
+.contain-grid.default, .contain-list.default {
+    /* opacity: 1; */
+    display: block;
+    animation: fade-in 1s;
+}
+.contain-grid.show, .contain-list.show {
+    /* height: 100%; */
+    /* opacity: 1; */
+    display: block;
+    animation: fade-in 1s;
+}
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+@keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+}
+.menu-grid, .menu-list,.catagory .catagory-item {
+   cursor: pointer;
+}
+.contain-list .product-extra-link a:hover i{
+    background-color: rgb(189, 189, 189);
+    color: #8c2dec;
+    /* color: #dee2e6; */
+}
+.contain-list .product-extra-link a i{
+   padding: 12px;
+   font-size: medium;
+}
+
+.hvr-bounce-to-right {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+  }
+  
+  .hvr-bounce-to-right:before {
+    background: #f1edf141 !important;
+  }
+  
+  .hvr-bounce-to-right:active:before,
+  .hvr-bounce-to-right:focus:before,
+  .hvr-bounce-to-right:hover:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, .37, .66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, .37, .66);
+  }
+  
+  .hvr-bounce-to-right:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2098d1;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+
+  .sort-pagi-bar {
+    float: right;
+}
+.product-order ,.product-per-page{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    max-height: 100px;
+}
+#product-order-list {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.5s ease-out;
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #e8e8e8;
+    margin-top: -1px;
+    padding: 5px 10px;
+    /* position: absolute; */
+    right: 0;
+    display: none;
+    /* opacity: 0; */
+    z-index: 99;
+}
+#product-order-list.show {
+    height: 50px; /* Adjust this value based on your content */
+    /* opacity: 1; */
+    display: block;
+}
+
+#per-page-list {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.5s ease-out;
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #e8e8e8;
+    margin-top: -1px;
+    padding: 5px 10px;
+    /* position: absolute; */
+    right: 0;
+    display: none;
+    /* opacity: 0; */
+    z-index: 99;
+}
+#per-page-list.show {
+    height: 140px; /* Adjust this value based on your content */
+    /* opacity: 1; */
+    display: block;
 }
