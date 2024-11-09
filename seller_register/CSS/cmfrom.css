@@ -1,0 +1,121 @@
+.cmform-form {
+    width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Khmer OS Siemreap', sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+.cmform-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 20px;
+}
+.cP {
+    /* text-align: center; */
+    font-size: 15px;
+    color: #000000;
+    /* margin-right: 200px; */
+}
+.letc {
+    /* text-align: center; */
+ width: 20px;
+    color: #000000;
+    /* margin-left:-100px; */
+    /* margin-bottom: -5px; */
+}
+.lepc {
+    /* text-align: center; */
+ width: 16px;
+    color: #000000;
+   
+    
+}
+
+.more_thenC {
+    text-align: center;
+    font-size: 15px;
+    color: #333;
+}
+.cD {
+  
+    font-size: 15px;
+    color: #000000;
+    /* margin-right: 200px;
+    margin-top: -55px; */
+
+}
+.cP, .cD {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.groupC  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.per {
+    /* text-align: center; */
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 15xpx;
+}
+.per2 {
+    /* text-align: center; */
+    margin-bottom: 20px;
+    color: #33333367;
+    font-size: 15xpx;
+}
+.CMiD {
+    display: flex;
+    padding: 50px;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 15xpx;
+}
+
+.cmform-form input[type="submit"] {
+    width: 30%;
+    padding: 10px;
+    background-color: #000000;
+    border: none;
+    font-family: 'Khmer OS Siemreap', sans-serif;   
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+   
+ 
+
+}
+
+.cmform-form input[type="submit"]:hover {
+    background-color: #494b49;
+}
+.cmform-form input[type="button"] {
+  width: 30%;
+  padding: 10px;
+  background-color: #ffffff;
+  font-family: 'Khmer OS Siemreap', sans-serif;   
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  cursor: pointer;;
+ margin-left: 130px;
+
+
+}
+
+.cmform-form input[type="button"]:hover {
+  background-color: #494b49;
+}
+/* .group_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+} */
