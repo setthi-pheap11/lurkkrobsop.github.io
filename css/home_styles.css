@@ -376,7 +376,7 @@ width:100%;
   color: gray !important;
   background-color: white !important;
 }
-img{
+#home-container img{
   width: 100%;
 }
 .product-type-name img {
@@ -609,6 +609,8 @@ img{
     justify-content: center;
     align-items: center;
   }
+
+  
 
   @media (max-width: 760px) {
     .swiper-button-next {
