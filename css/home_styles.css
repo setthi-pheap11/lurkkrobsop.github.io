@@ -610,6 +610,8 @@ width:100%;
     align-items: center;
   }
 
+  
+
   @media (max-width: 760px) {
     .swiper-button-next {
       right: 20px;
