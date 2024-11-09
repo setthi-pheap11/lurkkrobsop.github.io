@@ -1,17 +1,20 @@
 .register-form {
-    width: 300px;
+    width: 700px;
     margin: 0 auto;
     padding: 20px;
+    font-family: 'Khmer OS Siemreap', sans-serif;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
+    
 }
 
 .register-form h2 {
     text-align: center;
     margin-bottom: 20px;
     color: #333;
+    font-size: 20px;
 }
 
 .register-form label {
@@ -20,28 +23,194 @@
     color: #555;
 }
 
-.register-form input[type="text"],
-.register-form input[type="email"],
-.register-form input[type="password"] {
-    width: 100%;
+.register-form input[type="text"]{
+    width: 20%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    font-family: 'Khmer OS Siemreap', sans-serif;
+    border: 1px solid #ccc; 
+    color: #000000;
+    border-radius: 15px;
     box-sizing: border-box;
+    justify-content: center;
+   
 }
+.per {
+ 
+    padding: 10px;
+    margin-bottom: 15px;
+    color: #00000063;
+    justify-content: center;
+}
+.register-form input[type="email"]{
+    width: 61%;
+    padding: 10px;
+    margin-bottom: 15px;
+    color: #000000;
+    font-family: 'Khmer OS Siemreap', sans-serif;
+    border: 1px solid #ccc; 
+    border-radius: 15px;
+    box-sizing: border-box;
+    justify-content: center;
+}
+/* Test */
+.phone-input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust gap between dropdown and input */
+  }
+  
+  .custom-select {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    width: 120px; /* Adjust width as needed */
+    background-color: #fff;
+    position: relative;
+    padding: 10px;
+    margin-bottom: 15px;
+    color: #555555;
+    font-family: 'Khmer OS Siemreap', sans-serif;
+    border: 1px solid #ccc; 
+    border-radius: 15px;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+  
+  .flag-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .flag-icon {
+    width: 24px; /* Adjust flag size */
+    height: 16px; /* Adjust flag size */
+    object-fit: cover;
+    border-radius: 3px;
+  }
+  
+  .country-code {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Hide the default dropdown */
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  select:focus {
+    outline: none;
+  }
+  
+  .phone-input {
+    width: 42%;
+    padding: 10px;
+    margin-bottom: 15px;
+    color: #000000;
+    font-family: 'Khmer OS Siemreap', sans-serif;
+    border: 1px solid #ccc; 
+    border-radius: 15px;
+    box-sizing: border-box;
+    justify-content: center;
+    
+  }
+
+  
+  .phone-input:focus {
+    outline: none;
+    border-color: #007bff; /* Highlight border color on focus */
+  }
+  
+/* Test */
+
+
 
 .register-form input[type="submit"] {
-    width: 100%;
+    width: 20%;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: #000000;
     border: none;
+    font-family: 'Khmer OS Siemreap', sans-serif;   
     border-radius: 5px;
     color: white;
     font-size: 16px;
     cursor: pointer;
+   
+ 
+
 }
 
 .register-form input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #494b49;
+}
+.register-form input[type="button"] {
+  width: 20%;
+  padding: 10px;
+  background-color: #000000;
+  border: none;
+  font-family: 'Khmer OS Siemreap', sans-serif;   
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+ 
+
+
+}
+
+.register-form input[type="button"]:hover {
+  background-color: #494b49;
+}
+.sP {
+    /* text-align: center; */
+    font-size: 15px;
+    color: #333;
+    /* margin-right: 200px; */
+}
+.lets {
+    /* text-align: center; */
+ width: 20px;
+    color: #333;
+    /* margin-left:-100px; */
+    /* margin-bottom: -5px; */
+}
+.lep {
+    /* text-align: center; */
+ width: 16px;
+    color: #333;
+   
+    
+}
+
+
+.more_then {
+    text-align: center;
+    font-size: 15px;
+    color: #333;
+}
+.sD {
+  
+    font-size: 15px;
+    color: #00000070;
+    /* margin-right: 200px;
+    margin-top: -55px; */
+
+}
+.sP, .sD {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.groupS {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
