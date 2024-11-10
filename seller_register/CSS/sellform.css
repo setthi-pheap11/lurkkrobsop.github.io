@@ -135,7 +135,7 @@ body {
     justify-content: center;
     display: flex;
 }
-.input-group , .dropdown-group , .textarea-group , .contact-details , .image-upload{
+.input-group , .textarea-group , .contact-details , .image-upload{
     width: 97%;
 
 }
