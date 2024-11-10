@@ -1,0 +1,474 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Detail Page</title>
+    <link rel="stylesheet" href="/Product/CSS/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <section
+      class="w-full min-h-screen m-0 p-0 flex flex-col items-center justify-center"
+    >
+      <div
+        class="w-full h-auto flex flex-col items-center justify-center p-10"
+        id="product-list"
+      >
+        <div class="w-full h-auto flex items-center justify-between p-5">
+          <h1 class="font-bold text-lg">Game</h1>
+          <a
+            class="font-bold animate-bounce text-blue-500"
+            href="/image/game/clashofclan.png"
+            >See more &rarr;</a
+          >
+        </div>
+        <div class="w-full grid lg:grid-cols-5 gap-5 grid-cols-1">
+          <!-- Sample products with data-product-id attributes to link to details -->
+
+          <div
+            class="product-card w-auto h-auto flex flex-col items-center justify-center transition-all transform duration-300 hover:scale-105 gap-2 border-2 border-transparent bg-clip-padding bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 p-[1px] shadow-lg rounded-lg"
+            data-product-id="1"
+          >
+            <div class="w-auto h-auto p-4 rounded-lg">
+              <img
+                class="h-[200px] rounded-xl object-cover"
+                src="/Product/image/game/clashofclan.png"
+                alt="Clash of Clan"
+              />
+              <h2 class="font-bold text-lg">Clash Of Clan</h2>
+              <div class="flex items-center justify-around gap-5">
+                <p class="text-md line-through">100$</p>
+                <p class="font-semibold text-md">$2.00</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- rule of survival -->
+          <div
+            class="product-card w-auto h-auto flex flex-col items-center justify-center transition-all transform duration-300 hover:scale-105 gap-2 border-2 border-transparent bg-clip-padding bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 p-[1px] shadow-lg rounded-lg"
+            data-product-id="2"
+          >
+            <img
+              class="h-[200px] rounded-xl object-cover p-4"
+              src="/Product/image/game/ruleofsurvival.png"
+              alt="rule of survival"
+            />
+            <h2 class="font-bold text-lg">Rule of Survival</h2>
+            <div class="flex items-center justify-around gap-5">
+              <p class="text-md line-through">100$</p>
+              <p class="font-semibold text-md">$2.00</p>
+            </div>
+          </div>
+
+          <!-- pubg -->
+
+          <div
+            class="product-card w-auto h-auto flex flex-col items-center justify-center transition-all transform duration-300 hover:scale-105 gap-2 border-2 border-transparent bg-clip-padding bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 p-[1px] shadow-lg rounded-lg"
+            data-product-id="3"
+          >
+            <img
+              class="h-[200px] rounded-xl object-cover p-4"
+              src="/Product/image/game/pubg.png"
+              alt="pubg"
+            />
+            <h2 class="font-bold text-lg">Pubg Mobile</h2>
+            <div class="flex items-center justify-around gap-5">
+              <p class="text-md line-through">100$</p>
+              <p class="font-semibold text-md">$2.00</p>
+            </div>
+          </div>
+
+          <!-- minecraff -->
+
+          <div
+            class="product-card w-auto h-auto flex flex-col items-center justify-center transition-all transform duration-300 hover:scale-105 gap-2 border-2 border-transparent bg-clip-padding bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 p-[1px] shadow-lg rounded-lg"
+            data-product-id="4"
+          >
+            <img
+              class="h-[200px] rounded-xl object-cover p-4"
+              src="/Product/image/game/minecraff.png"
+              alt="Clash of Clan"
+            />
+            <h2 class="font-bold text-lg">Minecraff</h2>
+            <div class="flex items-center justify-around gap-5">
+              <p class="text-md line-through">100$</p>
+              <p class="font-semibold text-md">$2.00</p>
+            </div>
+          </div>
+
+          <!-- GTA V -->
+
+          <div
+            class="product-card w-auto h-auto flex flex-col items-center justify-center transition-all transform duration-300 hover:scale-105 gap-2 border-2 border-transparent bg-clip-padding bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 p-[1px] shadow-lg rounded-lg"
+            data-product-id="5"
+          >
+            <img
+              class="h-[200px] rounded-xl object-cover p-4"
+              src="/Product/image/game/gtav.png"
+              alt="Clash of Clan"
+            />
+            <h2 class="font-bold text-lg">GTA V</h2>
+            <div class="flex items-center justify-around gap-5">
+              <p class="text-md line-through">100$</p>
+              <p class="font-semibold text-md">$2.00</p>
+            </div>
+          </div>
+
+          <!-- subway surfer -->
+
+          <div
+            class="product-card w-auto h-auto flex flex-col items-center justify-center transition-all transform duration-300 hover:scale-105 gap-2 border-2 border-transparent bg-clip-padding bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 p-[1px] shadow-lg rounded-lg"
+            data-product-id="6"
+          >
+            <img
+              class="h-[200px] rounded-xl object-cover p-4"
+              src="/Product/image/game/subway.png"
+              alt="subway"
+            />
+            <h2 class="font-bold text-lg">Subway Surfer</h2>
+            <div class="flex items-center justify-around gap-5">
+              <p class="text-md line-through">100$</p>
+              <p class="font-semibold text-md">$2.00</p>
+            </div>
+          </div>
+
+          <!-- dreamleauge -->
+
+          <div
+            class="product-card w-auto h-auto flex flex-col items-center justify-center transition-all transform duration-300 hover:scale-105 gap-2 border-2 border-transparent bg-clip-padding bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 p-[1px] shadow-lg rounded-lg"
+            data-product-id="7"
+          >
+            <img
+              class="h-[200px] rounded-xl object-cover p-4"
+              src="/Product/image/game/dreamleauge.png"
+              alt="Dreamleague"
+            />
+            <h2 class="font-bold text-lg">Dreamleague</h2>
+            <div class="flex items-center justify-around gap-5">
+              <p class="text-md line-through">100$</p>
+              <p class="font-semibold text-md">$2.00</p>
+            </div>
+          </div>
+
+          <!-- fifa -->
+
+          <div
+            class="product-card w-auto h-auto flex flex-col items-center justify-center transition-all transform duration-300 hover:scale-105 gap-2 border-2 border-transparent bg-clip-padding bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 p-[1px] shadow-lg rounded-lg"
+            data-product-id="8"
+          >
+            <img
+              class="h-[200px] rounded-xl object-cover p-4"
+              src="/Product/image/game/fifa.png"
+              alt="Fifa"
+            />
+            <h2 class="font-bold text-lg">FIFA</h2>
+            <div class="flex items-center justify-around gap-5">
+              <p class="text-md line-through">100$</p>
+              <p class="font-semibold text-md">$2.00</p>
+            </div>
+          </div>
+
+          <!-- pes -->
+
+          <div
+            class="product-card w-auto h-auto flex flex-col items-center justify-center transition-all transform duration-300 hover:scale-105 gap-2 border-2 border-transparent bg-clip-padding bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 p-[1px] shadow-lg rounded-lg"
+            data-product-id="9"
+          >
+            <img
+              class="h-[200px] rounded-xl object-cover p-4"
+              src="/Product/image/game/pes.png"
+              alt="Clash of Clan"
+            />
+            <h2 class="font-bold text-lg">PES</h2>
+            <div class="flex items-center justify-around gap-5">
+              <p class="text-md line-through">100$</p>
+              <p class="font-semibold text-md">$2.00</p>
+            </div>
+          </div>
+
+          <!-- temple run  -->
+          <div
+            class="product-card w-auto h-auto flex flex-col items-center justify-center transition-all transform duration-300 hover:scale-105 gap-2 border-2 border-transparent bg-clip-padding bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 p-[1px] shadow-lg rounded-lg"
+            data-product-id="10"
+          >
+            <img
+              class="h-[200px] rounded-xl object-cover p-4"
+              src="/Product/image/game/templerun.png"
+              alt="Temple run"
+            />
+            <h2 class="font-bold text-lg">Temple Run 2</h2>
+            <div class="flex items-center justify-around gap-5">
+              <p class="text-md line-through">100$</p>
+              <p class="font-semibold text-md">$2.00</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- software -->
+
+        <div class="flex items-center justify-between w-full p-5">
+          <h1 class="font-bold text-lg text-ellipsis">Software</h1>
+          <a
+            class="font-bold text-blue-500 animate-bounce"
+            href="/Product/image/software/ai.png"
+            >See more &rarr;</a
+          >
+        </div>
+
+        <div class="w-full grid lg:grid-cols-5 gap-5 grid-cols-1">
+          <!-- Illustrator -->
+          <div
+            class="product-card w-auto h-auto flex flex-col items-center justify-center transition-all transform duration-300 hover:scale-105 gap-2 border-2 border-transparent bg-clip-padding bg-gradient-to-br from-teal-200 via-blue-200 to-indigo-200 p-[1px] shadow-lg rounded-lg"
+            data-product-id="11"
+          >
+            <img
+              class="h-[200px] rounded-xl object-cover p-4"
+              src="/Product/image/software/ai.png"
+              alt="illustator"
+            />
+            <h2 class="font-bold text-lg">Illustrator</h2>
+            <div class="flex items-center justify-around gap-5">
+              <p class="text-md line-through">100$</p>
+              <p class="font-semibold text-md">$2.00</p>
+            </div>
+          </div>
+
+          <!-- photoshop -->
+          <div
+            class="product-card w-auto h-auto flex flex-col items-center justify-center transition-all transform duration-300 hover:scale-105 gap-2 border-2 border-transparent bg-clip-padding bg-gradient-to-br from-teal-200 via-blue-200 to-indigo-200 p-[1px] shadow-lg rounded-lg"
+            data-product-id="12"
+          >
+            <img
+              class="h-[200px] rounded-xl object-cover p-4"
+              src="/Product/image/software/photoshop.png"
+              alt="photo shop"
+            />
+            <h2 class="font-bold text-lg">Photo shop</h2>
+            <div class="flex items-center justify-around gap-5">
+              <p class="text-md line-through">100$</p>
+              <p class="font-semibold text-md">$2.00</p>
+            </div>
+          </div>
+
+          <!-- lightroom -->
+          <div
+            class="product-card w-auto h-auto flex flex-col items-center justify-center transition-all transform duration-300 hover:scale-105 gap-2 border-2 border-transparent bg-clip-padding bg-gradient-to-br from-teal-200 via-blue-200 to-indigo-200 p-[1px] shadow-lg rounded-lg"
+            data-product-id="13"
+          >
+            <img
+              class="h-[200px] rounded-xl object-cover p-4"
+              src="/Product/image/software/lightroom.png"
+              alt="ligthtroom"
+            />
+            <h2 class="font-bold text-lg">Lightroom</h2>
+            <div class="flex items-center justify-around gap-5">
+              <p class="text-md line-through">100$</p>
+              <p class="font-semibold text-md">$2.00</p>
+            </div>
+          </div>
+
+          <!-- coredraw -->
+          <div
+            class="product-card w-auto h-auto flex flex-col items-center justify-center transition-all transform duration-300 hover:scale-105 gap-2 border-2 border-transparent bg-clip-padding bg-gradient-to-br from-teal-200 via-blue-200 to-indigo-200 p-[1px] shadow-lg rounded-lg"
+            data-product-id="14"
+          >
+            <img
+              class="h-[200px] rounded-xl object-cover p-4"
+              src="/Product/image/software/coreldraw.png"
+              alt="coredraw"
+            />
+            <h2 class="font-bold text-lg">Coredraw</h2>
+            <div class="flex items-center justify-around gap-5">
+              <p class="text-md line-through">100$</p>
+              <p class="font-semibold text-md">$2.00</p>
+            </div>
+          </div>
+
+          <!-- word -->
+          <div
+            class="product-card w-auto h-auto flex flex-col items-center justify-center transition-all transform duration-300 hover:scale-105 gap-2 border-2 border-transparent bg-clip-padding bg-gradient-to-br from-teal-200 via-blue-200 to-indigo-200 p-[1px] shadow-lg rounded-lg"
+            data-product-id="15"
+          >
+            <img
+              class="h-[200px] rounded-xl object-cover p-4"
+              src="/Product/image/software/primer.png"
+              alt="primer"
+            />
+            <h2 class="font-bold text-lg">Premirer</h2>
+            <div class="flex items-center justify-around gap-5">
+              <p class="text-md line-through">100$</p>
+              <p class="font-semibold text-md">$2.00</p>
+            </div>
+          </div>
+
+          <!-- Aftereffect -->
+          <div
+            class="product-card w-auto h-auto flex flex-col items-center justify-center transition-all transform duration-300 hover:scale-105 gap-2 border-2 border-transparent bg-clip-padding bg-gradient-to-br from-teal-200 via-blue-200 to-indigo-200 p-[1px] shadow-lg rounded-lg"
+            data-product-id="16"
+          >
+            <img
+              class="h-[200px] rounded-xl object-cover p-4"
+              src="/Product/image/software/aftereffect.png"
+              alt="afterEffect"
+            />
+            <h2 class="font-bold text-lg">After Effect</h2>
+            <div class="flex items-center justify-around gap-5">
+              <p class="text-md line-through">100$</p>
+              <p class="font-semibold text-md">$2.00</p>
+            </div>
+          </div>
+
+          <!-- acrobat -->
+          <div
+            class="product-card w-auto h-auto flex flex-col items-center justify-center transition-all transform duration-300 hover:scale-105 gap-2 border-2 border-transparent bg-clip-padding bg-gradient-to-br from-teal-200 via-blue-200 to-indigo-200 p-[1px] shadow-lg rounded-lg"
+            data-product-id="17"
+          >
+            <img
+              class="h-[200px] rounded-xl object-cover p-4"
+              src="/Product/image/software/acrobat.png"
+              alt="acrobat"
+            />
+            <h2 class="font-bold text-lg">Acrobat</h2>
+            <div class="flex items-center justify-around gap-5">
+              <p class="text-md line-through">100$</p>
+              <p class="font-semibold text-md">$2.00</p>
+            </div>
+          </div>
+
+          <!-- I Design -->
+          <div
+            class="product-card w-auto h-auto flex flex-col items-center justify-center transition-all transform duration-300 hover:scale-105 gap-2 border-2 border-transparent bg-clip-padding bg-gradient-to-br from-teal-200 via-blue-200 to-indigo-200 p-[1px] shadow-lg rounded-lg"
+            data-product-id="18"
+          >
+            <img
+              class="h-[200px] rounded-xl object-cover p-4"
+              src="/Product/image/software/idesign.png"
+              alt="I Design"
+            />
+            <h2 class="font-bold text-lg">IDesign</h2>
+            <div class="flex items-center justify-around gap-5">
+              <p class="text-md line-through">100$</p>
+              <p class="font-semibold text-md">$2.00</p>
+            </div>
+          </div>
+
+          <!-- word -->
+          <div
+            class="product-card w-auto h-auto flex flex-col items-center justify-center transition-all transform duration-300 hover:scale-105 gap-2 border-2 border-transparent bg-clip-padding bg-gradient-to-br from-teal-200 via-blue-200 to-indigo-200 p-[1px] shadow-lg rounded-lg"
+            data-product-id="19"
+          >
+            <img
+              class="h-[200px] rounded-xl object-cover p-4"
+              src="/Product/image/software/newword.png"
+              alt="word"
+            />
+            <h2 class="font-bold text-lg">Word</h2>
+            <div class="flex items-center justify-around gap-5">
+              <p class="text-md line-through">100$</p>
+              <p class="font-semibold text-md">$2.00</p>
+            </div>
+          </div>
+
+          <!-- Excel -->
+          <div
+            class="product-card w-auto h-auto flex flex-col items-center justify-center transition-all transform duration-300 hover:scale-105 gap-2 border-2 border-transparent bg-clip-padding bg-gradient-to-br from-teal-200 via-blue-200 to-indigo-200 p-[1px] shadow-lg rounded-lg"
+            data-product-id="20"
+          >
+            <img
+              class="h-[200px] rounded-xl object-cover p-4"
+              src="/Product/image/software/excel.png"
+              alt="Excel"
+            />
+            <h2 class="font-bold text-lg">Excel</h2>
+            <div class="flex items-center justify-around gap-5">
+              <p class="text-md line-through">100$</p>
+              <p class="font-semibold text-md">$2.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hidden section for product details -->
+
+      <div id="product-detail" class="hidden  " style="margin: 40px;">
+        <div class="header mb-5 ">
+          <div class="flex items-center justify-start gap-10 my-10">
+            <button
+              id="back-button"
+              class="flex items-center rounded-lg px-4 py-2 bg-blue-500 text-white shadow-lg hover:bg-blue-700 transition-all duration-300 ease-in-out transform hover:scale-105 "
+            >
+              <i class="fa fa-arrow-left mr-2"></i> Back
+            </button>
+            <div class="flex items-center border-b-2 border-yellow-500">
+              <p class="font-bold text-2xl">Product</p>
+              <p class="font-bold text-2xl text-orange-500 ml-1">Detail</p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Product Detail -->
+        <div class="flex gap-10">
+          <!-- Left Section -->
+          <div id="left" class="w-1/2 flex  items-start h-auto gap-10">
+            <div class="flex flex-col gap-2 mb-5 justify-start h-full items-start">
+              <img class="image w-24 h-24 border rounded-lg" id="product-image1" src="" alt="Product Image" />
+              <img class="image w-24 h-24 border rounded-lg" id="product-image2" src="" alt="Product Image" />
+            </div>
+            <div id="right-photo" class="border rounded-lg p-2">
+              <img id="product-image" class="w-[500px] rounded-lg" src="" alt="Product Image" style="width: 500px;"/>
+            </div>
+          </div>
+      
+          <!-- Right Section -->
+          <div id="right" class="w-1/2">
+            <div id="rate" class="flex items-center mb-2">
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <span id="review" class="ml-2 text-gray-600">(32 Reviews)</span>
+            </div>
+      
+            <h1 id="product-name" class="text-3xl font-semibold mb-5">Spiced Mint Candle</h1>
+            <p id="product-description" class="text-gray-700 mb-5">
+              All hand-made with natural soy wax, Candleaf is made for your pleasure moments...
+            </p>
+            <div class="mb-5">
+              <p class="text-gray-500 line-through">$4.50</p>
+              <p id="product-price" class="text-red-500 text-2xl font-bold">$2.99</p>
+            </div>
+            <p class="mb-5">Shop: <span id="shop-name" class="text-gray-700 font-medium">Home candle</span></p>
+            <p class="mb-5">Open: <span id="open" class="text-gray-700 font-medium">09:00 AM - 07:00 PM</span></p>
+            <p class="mb-5">Discount Type: <span id="discount" class="text-purple-600 font-medium">Discount Off</span></p>
+            <p class="mb-5">Promotion Date: <span id="promotion" class="text-red-500 font-medium">02/05/2024 - 30/05/2024</span></p>
+      
+            <div id="button" class="flex gap-4 mt-5 ">
+              <button class="flex-1 px-5 py-3 bg-white border border-purple-600 text-purple-600 font-medium rounded-lg hover:bg-purple-50">
+                Add To Cart
+              </button>
+              <button class="flex-1 px-5 py-3 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700">
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      </div>
+      
+    </section>
+
+    <script src="/Product/Javascript/scriptlatest.js"></script>
+  </body>
+</html>
