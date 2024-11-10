@@ -32,6 +32,7 @@ body {
   .textarea-group,
   .contact-details {
     margin-bottom: 20px;
+    
   }
   
   label {
@@ -133,4 +134,8 @@ body {
     align-items: center;
     justify-content: center;
     display: flex;
+}
+.input-group , .dropdown-group , .textarea-group , .contact-details , .image-upload{
+    width: 97%;
+
 }
