@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form UI</title>
+  <link rel="stylesheet" href="CSS/sellform.css">
+</head>
+<body>
+  <div class="container">
+    <h2 class="titleS">ចុះឈ្មោះជាអ្នកលក់នៅក្នុងLURKKORBSOP</h2>
+    <hr>
+    <!-- Input Fields -->
+    <div class="dropdown-group">
+        <label for="category">ប្រភេទទំនិញ</label>
+        <select id="category">
+          <option value="cat1">Option 1</option>
+          <option value="cat2">Option 2</option>
+          <option value="cat3">Option 3</option>
+        </select>
+      </div>
+    <div class="input-group">
+      <label for="subtitle">ចំណងជើង</label>
+      <input type="text" id="subtitle" placeholder="បញ្ចូលចំណងជើង">
+    </div>
+    <hr>
+
+    <!-- Dropdown Group -->
+    <div class="dropdown-group-wrapper">
+      <div class="dropdown-group">
+        <label for="quantity">ចំនួនអត្ថបទ</label>
+        <select id="quantity">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="6">4</option>
+          <option value="7">5</option>
+          <option value="8">6</option>
+        </select>
+      </div>
+      <div class="dropdown-group">
+        <label for="category">តម្លៃ</label>
+        <input id="category">
+      </div>
+      <div class="dropdown-group">
+        <label for="percentage">បញ្ចុះតម្លៃ</label>
+        <select id="percentage">
+          <option value="90">90%</option>
+          <option value="80">80%</option>
+          <option value="70">70%</option>
+          <option value="none">None</option>
+        </select>
+      </div>
+      <div class="dropdown-group">
+        <label for="payment">ទូទាត់ប្រាក់</label>
+        <select id="payment" multiple>
+          <option value="aba">ABA</option>
+          <option value="paypal">PayPal</option>
+          <option value="visa">Visa</option>
+        </select>
+      </div>
+    </div>
+    <hr>
+
+    <!-- Textarea -->
+    <div class="textarea-group">
+      <label for="description">ពិពណ៌នាអត្ថបទ</label>
+      <textarea id="description" rows="3" placeholder="បញ្ចូលពិពណ៌នាអត្ថបទ"></textarea>
+    </div>
+
+    <!-- Contact Details -->
+    <div class="contact-details">
+      <label for="email">ព័តមានទំនាក់ទំនង</label>
+      <div class="contact-inputs">
+        <input type="email" id="email" placeholder="Email">
+        <select id="country-code">
+          <option value="+855">🇰🇭 +855</option>
+          <option value="+1">🇺🇸 +1</option>
+          <option value="+44">🇬🇧 +44</option>
+        </select>
+        <input type="tel" id="phone" placeholder="បញ្ចូលលេខទូរស័ព្ទ">
+      </div>
+    </div>
+
+    <!-- Full Content -->
+<div class="image-upload">
+    <label for="product-image">បញ្ចូលរូបភាពពីឧបករណ៍</label>
+    <input type="file" id="product-image" accept="image/*" multiple>
+</div>
+<!-- Display Uploaded Images -->
+<div class="image-preview" id="image-preview-container">
+    <!-- Images will be appended here -->
+</div>
+
+<!-- Image Cropper Modal -->
+<div id="cropper-modal" style="display: none;">
+    <div class="modal-content">
+        <span id="close-modal">&times;</span>
+        <img id="cropper-image" src="#" alt="Image to Crop">
+        <button id="crop-button">Crop</button>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" rel="stylesheet"/>
+
+<script>
+  let cropper;
+  let currentFile;
+  document.getElementById('product-image').addEventListener('change', function(event) {
+    const files = event.target.files;
+    if (files.length > 0) {
+      currentFile = files[0];
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const cropperImage = document.getElementById('cropper-image');
+        cropperImage.src = e.target.result;
+        document.getElementById('cropper-modal').style.display = 'block';
+        cropper = new Cropper(cropperImage, {
+          aspectRatio: 1,
+          viewMode: 1,
+        });
+      };
+      reader.readAsDataURL(currentFile);
+    }
+  });
+
+  document.getElementById('close-modal').addEventListener('click', function() {
+    document.getElementById('cropper-modal').style.display = 'none';
+    cropper.destroy();
+  });
+
+  document.getElementById('crop-button').addEventListener('click', function() {
+    const canvas = cropper.getCroppedCanvas();
+    const previewContainer = document.getElementById('image-preview-container');
+    const img = document.createElement('img');
+    img.src = canvas.toDataURL();
+    img.style.maxWidth = '100%';
+    img.style.height = 'auto';
+    previewContainer.appendChild(img);
+    document.getElementById('cropper-modal').style.display = 'none';
+    cropper.destroy();
+
+    // Process next file if available
+    const files = document.getElementById('product-image').files;
+    const currentIndex = Array.from(files).indexOf(currentFile);
+    if (currentIndex + 1 < files.length) {
+      currentFile = files[currentIndex + 1];
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const cropperImage = document.getElementById('cropper-image');
+        cropperImage.src = e.target.result;
+        document.getElementById('cropper-modal').style.display = 'block';
+        cropper = new Cropper(cropperImage, {
+          aspectRatio: 1,
+          viewMode: 1,
+        });
+      };
+      reader.readAsDataURL(currentFile);
+    }
+  });
+</script>
+<br>    
+
+<div class="button-container">
+    <button class="btn btn-outline">ថយក្រោយ</button>
+    <button class="btn btn-solid">ដាក់លក់</button>
+  </div>
+  <hr>
+  <label class="product-end">ចុះឈ្មោះគណនីអ្នកលក់អាជីវកម្ម ឬស្វែងយល់បន្ថែមអំពីគណនីអាជីវកម្ម</label>
+</body>
+</html>
