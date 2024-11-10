@@ -1,0 +1,84 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--foreground);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--card);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.box {
+    margin-bottom: 20px;
+}
+
+.box img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.box h1, .box h2, .box p {
+    margin: 0;
+}
+
+.box h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.box h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.box p {
+    font-size: 16px;
+    color: var(--muted-foreground);
+}
+
+.box .social-links a {
+    color: var(--primary);
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.box .social-links a:hover {
+    text-decoration: underline;
+}
+
+.box .buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.box .buttons .create-shop {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: var(--primary-foreground);
+}
+
+.box .buttons .edit {
+    background-color: var(--border);
+    color: var(--foreground);
+}
+
+.box .buttons .edit:hover {
+    background-color: var(--input);
+}
+
+.gradient-line {
+    width: 25%;
+    height: 3px;
+    background: linear-gradient(to right, #a96ae6, #ff7e5f);
+    margin-bottom: 1rem;
+}
