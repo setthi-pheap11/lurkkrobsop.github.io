@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Access</title>
+    <link rel="stylesheet" href="CSS/scanface.css">
+    
+</head>
+ 
+<body>
+     
+    
+    <div class="camera-container">
+        <div class="camerat">
+            <h1>ផ្ទៀងផ្ទាត់មុខ</h1>
+            </div>
+        <div class="camera">
+            <video id="video" width="640" height="480" autoplay></video>
+        </div>
+        <div class="controls">
+            <button id="captureButton">​​​​​​ចុចថត​</button>
+        </div>
+        <script>
+            document.getElementById('captureButton').addEventListener('click', function() {
+            var video = document.getElementById('video');
+            var canvas = document.createElement('canvas');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            var context = canvas.getContext('2d');
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            var dataURL = canvas.toDataURL('image/png');
+            console.log(dataURL); // You can use this data URL to display the captured image or send it to a server
+
+            // Show processing message
+            var processingMessage = document.createElement('p');
+            processingMessage.innerText = 'checking...';
+            document.body.appendChild(processingMessage);
+
+            // Simulate processing delay
+            setTimeout(function() {
+                // Redirect to another page
+                window.location.href = 'cmform.html'; // Replace 'cmform.html' with the actual page you want to navigate to
+            }, 2000); // Adjust the delay as needed
+            });
+        </script>
+        <div class="camerap">
+            <p>បញ្ចាក់មុខរបស់លោកអ្នកជាមួយអត្តសញ្ញាណប័ណ្ធ</p>
+            </div>
+    </div>
+
+    <script>
+        // Access the camera
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function(stream) {
+                var video = document.getElementById('video');
+                video.srcObject = stream;
+                video.play();
+            })
+            .catch(function(err) {
+                console.log("An error occurred: " + err);
+            });
+
+        // Capture button functionality
+        document.getElementById('captureButton').addEventListener('click', function() {
+            var video = document.getElementById('video');
+            var canvas = document.createElement('canvas');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            var context = canvas.getContext('2d');
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            var dataURL = canvas.toDataURL('image/png');
+            console.log(dataURL); // You can use this data URL to display the captured image or send it to a server
+        });
+    </script>
+
+  
+</body>
+</html>
