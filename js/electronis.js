@@ -1,6 +1,7 @@
 
 function itemShow(menu) {
-  const self = document.getElementById('fashion-container');
+  const self = document.getElementById('electronis-container');
+  console.log(111,self);
   let contain_grid = self.querySelector('.contain-grid');
   let contain_list = self.querySelector('.contain-list');
   let menus_grid = self.querySelector('.menu-grid');
