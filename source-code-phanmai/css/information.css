@@ -3,14 +3,11 @@ body {
     font-family: Arial, sans-serif;
     background-color: var(--background);
     color: var(--foreground);
-    margin: 0;
-    padding: 0;
+
+   
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
     background-color: var(--card);
     border-radius: var(--radius);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -20,13 +17,10 @@ body {
     margin-bottom: 20px;
 }
 
-.box img {
-    border-radius: 50%;
-    margin-right: 10px;
-}
 
-.box h1, .box h2, .box p {
-    margin: 0;
+.box img {
+    border-radius: 10px;
+    margin-right: 10px;
 }
 
 .box h1 {
@@ -41,43 +35,41 @@ body {
 }
 
 .box p {
-    font-size: 16px;
+    font-size: 15px;
     color: var(--muted-foreground);
 }
 
-.box .social-links a {
-    color: var(--primary);
-    text-decoration: none;
-    margin-right: 10px;
+
+.create-shop{
+    width: 120px;
+    height: 40px;
+    border-radius: 15%;
+    background-color: #a96ae6;
+
 }
 
-.box .social-links a:hover {
-    text-decoration: underline;
-}
-
-.box .buttons button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: var(--radius);
-    cursor: pointer;
-}
-
-.box .buttons .create-shop {
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
+/* .create-shop {
+    background: linear-gradient(to right, #a96ae6, #c79184);
     color: var(--primary-foreground);
+} */
+
+.edit {
+    width: 80px;
+    height: 40px;
+    border-radius: 15%;
+    background-color: #a96ae6;
+    color: white;
 }
 
-.box .buttons .edit {
-    background-color: var(--border);
-    color: var(--foreground);
-}
+/* .edit {
+    background: linear-gradient(to right, #a96ae6, #c79184);
+    color: var(--primary-foreground);
+} */
 
-.box .buttons .edit:hover {
-    background-color: var(--input);
-}
+
 
 .gradient-line {
-    width: 25%;
+    width: 43%;
     height: 3px;
     background: linear-gradient(to right, #a96ae6, #ff7e5f);
     margin-bottom: 1rem;
