@@ -64,23 +64,37 @@ function showContainer(container) {
   let containers = document.querySelectorAll('.contain');
   let menus = document.querySelectorAll('.menu-item');
   // Hide all slides
-  console.log(123,container);
-  containers.forEach(contain => {
-  console.log(222,contain.id);
+  // console.log(123,container);
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  let c = container.replace("-container", "");
+  link.href = `css/${c}.css`;  
+  link.id = `${c}`;
 
+  containers.forEach(contain => {
     if(contain.id === container){
       contain.classList.add('show')
       // contain.classList.remove('defult')
+      if (!document.head.contains(link)) {
+        document.head.appendChild(link);
+        console.log(222,link);
+      }
     }
     else{
       contain.classList.remove('show')
       contain.classList.remove('default')
+      const cid = contain.id.replace("-container", "");
+      const elink = document.head.querySelector(`#${cid}`);
+      if(cid != 'home' && cid != c){
+        if (document.head.contains(elink)) {
+          document.head.removeChild(elink);
+          console.log(333,elink);
+        }
+      }
     }
   });
 
   menus.forEach(menu => {
-  console.log(333,menu.id);
-
     if(menu.id === container.split('-')[0])
       menu.classList.add('active');
     else

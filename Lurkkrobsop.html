@@ -18,12 +18,15 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
     
-    <link rel="stylesheet" href="seller_register/CSS/Sellerinstruction.css">
-    <link rel="stylesheet" href="css/home_styles.css" />
-    <link rel="stylesheet" href="css/fashion.css" />
-    <link rel="stylesheet" href="css/test.css" />
-    <link rel="stylesheet" href="css/product.css" />
+    <!-- <link rel="stylesheet" href="seller_register/CSS/Sellerinstruction.css"> -->
+    <link rel="stylesheet" href="css/home.css" />
+    <!-- <link rel="stylesheet" href="css/fashion.css" /> -->
+    <!-- <link rel="stylesheet" href="css/test.css" /> -->
+    <!-- <link rel="stylesheet" href="css/product.css" /> -->
 
+    <!-- <link rel="stylesheet" href="css/output.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
 
   <style>
     .skiptranslate{
@@ -39,8 +42,8 @@
     <div id="header-container"></div> <!-- header-container must be here -->
 
     <div id="sellerinstruction-container" class="contain ">Sellerinstruction</div>
-    <div id="home-container" class="contain ">Home Container</div>
-    <div id="fashion-container" class="contain default" >Fashion Container </div>
+    <div id="home-container" class="contain default">Home Container</div>
+    <div id="fashion-container" class="contain " >Fashion Container </div>
     <div id="electronis-container" class="contain">Electronis Container </div>
     <div id="sports-container" class="contain" >Sports Container </div>
     <div id="shopping-container" class="contain" >shopping Container </div>
@@ -172,8 +175,8 @@
         .then(data => {
           document.getElementById('product-container').innerHTML = data;
           const script = document.createElement('script');
-          script.src = 'js/product.js';  // Path to your Swiper JS file
-          document.body.appendChild(script);  // Append the script to the body or head
+          script.src = 'js/product.js';  
+          document.body.appendChild(script);  
         })
         .catch(error => console.error(error));
 
