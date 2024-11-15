@@ -12,7 +12,7 @@ var swiper = new Swiper('.swiper', {
     },
   });
 
-  console.log(5555,document.querySelector('.swiper_new_arrivals'));
+  // console.log(5555,document.querySelector('.swiper_new_arrivals'));
 
 
   var swiper_new_arrivals_1 = new Swiper('.swiper_new_arrivals_1', {

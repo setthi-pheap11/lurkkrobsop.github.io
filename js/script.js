@@ -1,9 +1,10 @@
 let lastContain = '';
+// var selectField = document.querySelector('.goog-te-combo');
 
 function translateToKhmer() {
   // Find the hidden Google Translate dropdown
   var selectField = document.querySelector('.goog-te-combo');
-  
+  console.log(8877,selectField);
   // Select the Khmer and English buttons
   const btnTKM = document.querySelector('.t-km'),  // Assuming .t-km is for Khmer
         btnTEN = document.querySelector('.t-en'),
@@ -13,7 +14,11 @@ function translateToKhmer() {
   if (selectField && selectField.value !== 'km') {
     selectField.value = 'km';  // Set to Khmer
     selectField.dispatchEvent(new Event('change'));  // Trigger translation
-    
+    if(selectField.value !== 'km'){
+      selectField.value = 'km';  // Set to Khmer
+      selectField.dispatchEvent(new Event('change'));
+    }
+      
     // Add background class to Khmer button, remove from English
     btnTKM.classList.add('bg-A96AE6');
     btnTEN.classList.remove('bg-A96AE6','text-white');
@@ -35,7 +40,10 @@ function translateToEnglish() {
   if (selectField && selectField.value !== 'en') {
     selectField.value = 'en';  // Set to English
     selectField.dispatchEvent(new Event('change'));  // Trigger translation
-    
+    if(selectField.value !== 'en'){
+      selectField.value = 'en';  // Set to Khmer
+      selectField.dispatchEvent(new Event('change'));
+    }
     // Add background class to English button, remove from Khmer
     btnTEN.classList.add('bg-A96AE6');
     btnTKM.classList.remove('bg-A96AE6','text-white');
@@ -70,9 +78,12 @@ function showContainer(container) {
   let c = container.replace("-container", "");
   link.href = `css/${c}.css`;  
   link.id = `${c}`;
-
+  if(c=='myAcount'){
+    showLoinForm();
+  }
   containers.forEach(contain => {
     if(contain.id === container){
+      
       contain.classList.add('show')
       // contain.classList.remove('defult')
       if (!document.head.contains(link)) {
@@ -101,3 +112,4 @@ function showContainer(container) {
       menu.classList.remove('active');
   });
 }
+

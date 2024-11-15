@@ -48,7 +48,7 @@
     left: 0;
 }
 
-.rounded-1{
+/* .rounded-1{
     border-radius: .5rem !important;
 }
 .rounded-2{
@@ -62,7 +62,7 @@
 }
 .rounded-5{
     border-radius: 5rem !important;
-}
+} */
 .bg-home {
     background-color: #a96ae6 !important;
     color: white !important;

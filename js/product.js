@@ -242,8 +242,8 @@ const products = {
     smallimage2: "/Product/image/software/excel.png",
   },
 };
-
-document.addEventListener("DOMContentLoaded", () => {
+console.log(123);
+// document.addEventListener("DOMContentLoaded", () => {
   const productList = document.getElementById("product-list");
   const productDetail = document.getElementById("product-detail");
   const backButton = document.getElementById("back-button");
@@ -290,4 +290,4 @@ document.addEventListener("DOMContentLoaded", () => {
     productDetail.classList.add("hidden");
     productList.classList.remove("hidden");
   });
-});
+// });
