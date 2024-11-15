@@ -1,3 +1,8 @@
+@import url('../seller_register/CSS/sellerrigister1.css');
+@import url('../seller_register/CSS/cmfrom.css');
+@import url('../seller_register/CSS/scanface.css');
+
+
 body {
     font-family: "Khmer OS Siemreap", Arial, sans-serif;
     margin: 0;
@@ -9,7 +14,13 @@ body {
 body {
     overflow-x: hidden;
 }
-
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    position: relative;
+}
 header {
     background-color: #c3c3c3;
     color: #000000;
@@ -214,7 +225,7 @@ header {
     align-items: center;
     gap: 50px;
     margin: auto;
-    margin-bottom:-20px;
+    /* margin-bottom:-20px; */
    
 }
 .pay2{
@@ -223,7 +234,10 @@ header {
     gap: 50px;
     margin: auto;
     margin-bottom: 200px;
-    margin-left: 150px;
+    /* margin-left: 150px; */
     
 }
+
+/* @import url('../seller_register/CSS/sellerrigister1.css'); */
+
 

@@ -16,7 +16,7 @@
     max-width: 1000px;
 }
 
-body {
+.modal-body {
     font-family: 'Khmer OS Siemreap', sans-serif;
     display: flex;
     justify-content: center;

@@ -1,5 +1,5 @@
-<div id="google_translate_element" style="display:none;"></div>
-<div class="navbar">
+<!-- <div id="google_translate_element" style="display:none;"></div> -->
+<div class="navbar navbar-top navbar-dark" id="">
   <div class="container">
     <div class="header d-flex w-100">
       <div class="cont-left w-50">
@@ -19,7 +19,7 @@
             <span>Seller Register</span>
           </div>
           <line></line>
-          <div onclick="showContainer('myAcount-container')" id="myAcount" class="menu-item d-flex gap-2">
+          <div onclick="showContainer('myAcount-container')" id="myAcount" class="menu-item d-flex gap-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <i class="fa-solid fa-user fs-6 c-A96AE6"></i>
             <span>My Account</span>
             <line></line>
@@ -61,6 +61,10 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+<div class="navbar navbar-dark my-2 mx-1 p-0 rounded-4" id="navbar" >
+  <div class="container">
     <div class="menu d-flex w-100">
       <div class="cont-left w-25">
         <div class="d-flex">
@@ -97,10 +101,13 @@
           </div>
           <div>
             <div class="d-flex justify-content-center align-items-center" style="position: relative;">
-              <input onchange="showContainer('product-container')" id="_el_search" type="search"
+              <!-- <input onchange="showContainer('product-container')" id="_el_search" type="search"
                 class=" form-control rounded-5 fade data-input" data-field="search_value"
                 placeholder="Search Product" />
               <span onclick="toggleSlide()" id="_btn_search" class="menu-item ">
+                <i class="fa-solid fa-magnifying-glass" style="cursor: pointer;"></i>
+              </span> -->
+              <span onclick="showContainer('product-container')" id="product" class="menu-item ">
                 <i class="fa-solid fa-magnifying-glass" style="cursor: pointer;"></i>
               </span>
             </div>
