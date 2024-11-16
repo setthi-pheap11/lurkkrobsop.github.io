@@ -1,6 +1,7 @@
 
-function itemShow(menu) {
-  const self = document.getElementById('fashion-container');
+function itemShow(menu,page='fashion') {
+  const self = document.getElementById(`${page}-container`);
+  if(!self) return;
   let contain_grid = self.querySelector('.contain-grid');
   let contain_list = self.querySelector('.contain-list');
   let menus_grid = self.querySelector('.menu-grid');
@@ -13,6 +14,7 @@ function itemShow(menu) {
     menus_list.classList.add('bg-list');
     menus_grid.classList.remove('bg-list');
     menus_list.classList.remove('bg-grid');
+    AOS.init();
   }else if(menu == 'list'){
     contain_grid.classList.remove('show','default');
     contain_list.classList.add('show');
@@ -20,8 +22,11 @@ function itemShow(menu) {
     menus_list.classList.remove('bg-list');
     menus_grid.classList.add('bg-list');
     menus_list.classList.add('bg-grid');
+    AOS.init();
   }
 }
+
+
 
 // const productOrderToggle = document.getElementById('product-order-toggle');
 // const productOrderList = document.getElementById('product-order-list');

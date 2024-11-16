@@ -45,6 +45,7 @@
           document.getElementById('fashion-container').innerHTML = data;
           const script = document.createElement('script');
           script.src = 'js/fashion.js';  // Path to your Swiper JS file
+          AOS.init();
           document.body.appendChild(script);  // Append the script to the body or head
         })
         .catch(error => console.error(error));
@@ -91,6 +92,11 @@
         })
         .then(data => {
           document.getElementById('electronis-container').innerHTML = data;
+          const script = document.createElement('script');
+          script.src = 'js/fashion.js';  // Path to your Swiper JS file
+          AOS.init();
+          if(document.head.contains(script)) return;
+          document.body.appendChild(script);  // Append the script to the body or head
         })
         .catch(error => console.error(error));
 
@@ -104,6 +110,11 @@
         })
         .then(data => {
           document.getElementById('sports-container').innerHTML = data;
+          const script = document.createElement('script');
+          script.src = 'js/fashion.js';  // Path to your Swiper JS file
+          AOS.init();
+          if(document.head.contains(script)) return;
+          document.body.appendChild(script);  // Append the script to the body or head
         })
         .catch(error => console.error(error));
 
