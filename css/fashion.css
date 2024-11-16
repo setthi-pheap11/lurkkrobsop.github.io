@@ -1,4 +1,12 @@
 
+*{
+  /* font-family: Poppins, sans-serif, Hanuman, serif; */
+  font-family: Roboto,sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: #004664;
+}
 
 .left-fashion-info {
     width: 25%;
@@ -131,12 +139,12 @@
 .menu-grid, .menu-list,.catagory .catagory-item {
    cursor: pointer;
 }
-.contain-list .product-extra-link a:hover i{
+.contain-list .product-extra a:hover i{
     background-color: rgb(189, 189, 189);
     color: #8c2dec;
     /* color: #dee2e6; */
 }
-.contain-list .product-extra-link a i{
+.contain-list .product-extra a i{
    padding: 12px;
    font-size: medium;
 }
