@@ -44,6 +44,7 @@
 
 .box h1, .box h2, .box p {
     margin: 0;
+    color: #004664;
 }
 
 .box h1 {
