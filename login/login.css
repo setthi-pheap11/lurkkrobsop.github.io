@@ -1,12 +1,16 @@
+@import "https://fonts.googleapis.com/css?family=Roboto";
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
+    font-family: Roboto,sans-serif;
+    font-size: 0.9rem;
 }
 
 .modal-body {
-    background: url('../images/home/web-login-bg.webp') no-repeat center center fixed;
+    background: url('../images/home/web-login-page2.jpg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -43,7 +47,7 @@
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
 }
 
-h1 {
+.login-box h1 {
     font-size: 2.3rem;
     color: white;
     font-weight: bolder;
@@ -53,13 +57,13 @@ h1 {
     font-size: 3rem;
 }
 
-p {
+.login-box p {
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 30px;
     font-weight: 500;
 }
 
-span {
+.login-box span {
     color: rgba(255, 255, 255, 0.7);
     font-size: .9rem;
 }
@@ -83,7 +87,7 @@ span {
     font-size: 1rem;
 }
 
-button {
+.login-box button {
     background-color: #f05c4e;
     border: none;
     padding: 5px 10px;
@@ -94,7 +98,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.login-box button:hover {
     background-color: #d9493b;
 }
 

@@ -557,10 +557,14 @@ video {
 }
 
 .container {
+  max-width: 1200px;
   width: 100%;
+  margin: auto;
+  padding: 0;
+  position: relative;
 }
 
-@media (min-width: 640px) {
+/* @media (min-width: 640px) {
   .container {
     max-width: 640px;
   }
@@ -570,15 +574,15 @@ video {
   .container {
     max-width: 768px;
   }
-}
+} */
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .container {
     max-width: 1024px;
   }
-}
+} */
 
-@media (min-width: 1280px) {
+/* @media (min-width: 1280px) {
   .container {
     max-width: 1280px;
   }
@@ -588,7 +592,7 @@ video {
   .container {
     max-width: 1536px;
   }
-}
+} */
 
 .m-0 {
   margin: 0px;
