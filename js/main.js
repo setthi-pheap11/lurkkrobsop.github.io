@@ -1,6 +1,6 @@
 // {/* <script> */}
 // lurkkrobsop.github.io/
-      const subURL = "";
+      const subURL = "lurkkrobsop.github.io/";
       // Use Fetch API to load the header
       fetch('../'+subURL+'layout/header.html')
         .then(response => { 
