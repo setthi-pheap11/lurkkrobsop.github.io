@@ -1,5 +1,8 @@
 // {/* <script> */}
       const subURL ='';
+      if (window.location.hostname === "setthi-pheap11.github.io") {
+        subURL = "lurkkrobsop.github.io/";
+      }
       // subURL = "lurkkrobsop.github.io/";
       // Use Fetch API to load the header
       fetch('../'+subURL+'layout/header.html')
