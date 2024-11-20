@@ -76,7 +76,7 @@ function showContainer(container) {
   const link = document.createElement('link');
   link.rel = 'stylesheet';
   let c = container.replace("-container", "");
-  link.href = `/css/${c}.css`;  
+  link.href = `css/${c}.css`;  
   link.id = `${c}`;
   if(c=='myAcount'){
     showLoinForm();
