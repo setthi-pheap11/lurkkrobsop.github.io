@@ -80,6 +80,12 @@ h3 {
   font-weight: 700;
   line-height: 140%;
 }
+.overflow-hover-auto {
+  overflow: hidden;
+}
+.overflow-hover-auto:hover {
+  overflow: auto;
+}
 .heading-span-color-yellow {
   color: #A96AE6;
 }
@@ -350,6 +356,18 @@ ul {
 }
 .footer .cont-left span {
   color: #ffffff;
+}
+
+.veiw-order-summary{
+  /* display: none; */
+  position: absolute;
+  right: 0;
+  background-color: white;
+  width: 400px;
+  height: 500px;
+  overflow: hidden;
+  z-index: 999;
+  color: #004664;
 }
 
 .main-contain {

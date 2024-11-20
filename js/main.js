@@ -1,6 +1,6 @@
 // {/* <script> */}
-// lurkkrobsop.github.io/
-      const subURL = "lurkkrobsop.github.io/";
+      const subURL ='';
+      // subURL = "lurkkrobsop.github.io/";
       // Use Fetch API to load the header
       fetch('../'+subURL+'layout/header.html')
         .then(response => { 
@@ -46,7 +46,6 @@
           document.getElementById('fashion-container').innerHTML = data;
           const script = document.createElement('script');
           script.src = 'js/fashion.js';  // Path to your Swiper JS file
-          AOS.init();
           document.body.appendChild(script);  // Append the script to the body or head
         })
         .catch(error => console.error(error));
@@ -94,8 +93,8 @@
         .then(data => {
           document.getElementById('electronis-container').innerHTML = data;
           const script = document.createElement('script');
-          script.src = 'js/fashion.js';  // Path to your Swiper JS file
           AOS.init();
+          script.src = 'js/fashion.js';  // Path to your Swiper JS file
           if(document.head.contains(script)) return;
           document.body.appendChild(script);  // Append the script to the body or head
         })
@@ -113,7 +112,6 @@
           document.getElementById('sports-container').innerHTML = data;
           const script = document.createElement('script');
           script.src = 'js/fashion.js';  // Path to your Swiper JS file
-          AOS.init();
           if(document.head.contains(script)) return;
           document.body.appendChild(script);  // Append the script to the body or head
         })
