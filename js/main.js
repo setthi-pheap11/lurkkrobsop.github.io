@@ -8,7 +8,7 @@ let subURL ='';
 
       // subURL = "lurkkrobsop.github.io/";
       // Use Fetch API to load the header
-      fetch('../'+subURL+'layout/header.html')
+      fetch(''+subURL+'layout/header.html')
         .then(response => { 
           if (!response.ok) {
             throw new Error('Error fetching header: ' + response.status);
@@ -24,7 +24,7 @@ let subURL ='';
         .catch(error => console.error(error));
 
       // Fetch home page content
-      fetch('../'+subURL+'pages/home.html')
+      fetch(''+subURL+'pages/home.html')
         .then(response => {
           if (!response.ok) {
             throw new Error('Error fetching home page: ' + response.status);
@@ -41,7 +41,7 @@ let subURL ='';
         .catch(error => console.error(error));
 
       // Fetch home page content
-      fetch('../'+subURL+'pages/fashion.html')
+      fetch(''+subURL+'pages/fashion.html')
         .then(response => {
           if (!response.ok) {
             throw new Error('Error fetching fashion page: ' + response.status);
@@ -57,7 +57,7 @@ let subURL ='';
         .catch(error => console.error(error));
 
       // Fetch seller instructions
-      fetch('../'+subURL+'pages/sellerinstruction.html')
+      fetch(''+subURL+'pages/sellerinstruction.html')
         .then(response => {
           if (!response.ok) {
             throw new Error('Error fetching seller instructions: ' + response.status);
@@ -73,7 +73,7 @@ let subURL ='';
         .catch(error => console.error(error));
 
       // Fetch seller instructions
-      fetch('../'+subURL+'pages/myAcount.html')
+      fetch(''+subURL+'pages/myAcount.html')
         .then(response => {
           if (!response.ok) {
             throw new Error('Error fetching myAcount instructions: ' + response.status);
@@ -89,7 +89,7 @@ let subURL ='';
         .catch(error => console.error(error));
       
       // Fetch electronis instructions
-      fetch('../'+subURL+'pages/electronis.html')
+      fetch(''+subURL+'pages/electronis.html')
         .then(response => {
           if (!response.ok) {
             throw new Error('Error fetching electronis instructions: ' + response.status);
@@ -107,7 +107,7 @@ let subURL ='';
         .catch(error => console.error(error));
 
         // Fetch sport instructions
-      fetch('../'+subURL+'pages/sports.html')
+      fetch(''+subURL+'pages/sports.html')
         .then(response => {
           if (!response.ok) {
             throw new Error('Error fetching sports instructions: ' + response.status);
@@ -124,7 +124,7 @@ let subURL ='';
         .catch(error => console.error(error));
 
         // Fetch test instructions
-      fetch('../'+subURL+'pages/test.html')
+      fetch(''+subURL+'pages/test.html')
         .then(response => {
           if (!response.ok) {
             throw new Error('Error fetching test instructions: ' + response.status);
@@ -137,7 +137,7 @@ let subURL ='';
         .catch(error => console.error(error));
       
       // Fetch seller instructions
-      fetch('../'+subURL+'pages/seller.html')
+      fetch(''+subURL+'pages/seller.html')
         .then(response => {
           if (!response.ok) {
             throw new Error('Error fetching seller instructions: ' + response.status);
@@ -149,7 +149,7 @@ let subURL ='';
         })
         .catch(error => console.error(error));
       
-      fetch('../'+subURL+'pages/product.html')
+      fetch(''+subURL+'pages/product.html')
         .then(response => {
           if (!response.ok) {
             throw new Error('Error fetching seller instructions: ' + response.status);
@@ -165,7 +165,7 @@ let subURL ='';
         .catch(error => console.error(error));
 
       // Fetch footer
-      fetch('../'+subURL+'layout/footer.html')
+      fetch(''+subURL+'layout/footer.html')
         .then(response => {
           if (!response.ok) {
             throw new Error('Error fetching footer: ' + response.status);
