@@ -1,5 +1,6 @@
 // {/* <script> */}
-      const subURL ='';
+      
+let subURL ='';
       console.log(1234,window.location.hostname);
       if (window.location.hostname === "setthi-pheap11.github.io") {
         subURL = "lurkkrobsop.github.io/";
