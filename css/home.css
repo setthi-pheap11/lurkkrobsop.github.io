@@ -62,6 +62,26 @@ body {
   overflow-y: auto !important;
   /* margin-top: 130; */
 }
+
+#loadingScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* Background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensures it stays on top */
+}
+#loadingScreen img {
+  width: 100px; /* Adjust as needed */
+}
+body {
+  overflow: hidden; /* Prevent scrolling while loading */
+}
+
 h1,h2,h3,h4,h5,h6{
   font-family: PT Serif,serif;
   font-weight: 700;
@@ -321,10 +341,9 @@ ul {
   z-index: 9;
 }
 
-.contain {
+/* .contain {
   height: 0;
   opacity: 0;
-  /* display: none; */
   transition: height 0.5s ease-in-out, opacity 0.8s ease-in-out;
   overflow: hidden;
 }
@@ -333,9 +352,39 @@ ul {
   height: 100%;
 }
 .contain.show {
-  height: 100%; /* Adjust the width as needed */
+  height: 100%; 
   opacity: 1;
-  /* display: block; */
+} */
+
+.contain {
+  display: none;
+  height: 100%; 
+  overflow: hidden;
+}
+.contain.default {
+  display: block;
+  animation: fade-in 1s;
+}
+.contain.show {
+  display: block;
+  animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 .navbar-dark .menu .contain-menu {
