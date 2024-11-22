@@ -1,0 +1,129 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; 
+}
+
+.payment-container {
+    width: 350px;
+    padding: 20px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.payment-container h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.payment-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.payment-option {
+    width: 75px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.3s, background-color 0.3s;
+    position: relative;
+}
+
+.payment-option img {
+    width: 50px;
+    height: 24px;
+    margin-bottom: 5px;
+}
+
+.payment-option p {
+    font-size: 10px;
+    margin: 0;
+    color: #555;
+}
+
+/* Hide the radio button */
+.payment-option input[type="radio"] {
+    display: none;
+}
+
+/* Style for selected option */
+.payment-option input[type="radio"]:checked + .content {
+    border-color: #6200ea;
+    background-color: #f1e6ff;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+.buttons {
+    display:flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-left: 10px;
+    text-align: center;
+    gap: 10px; 
+    
+  
+   
+  }
+
+   
+  
+  
+  .btn {
+    padding: 10px 20px; /* Space inside the buttons */
+    font-size: 16px; /* Button text size */
+    cursor: pointer; /* Mouse pointer on hover */
+    border: none; /* Remove the default border */
+    border-radius: 10px; /* Rounded corners */
+  
+}
+   
+    
+
+  
+  
+  .btn-back {
+    background-color: white;
+    color: #6e60ff;
+    border: 1px solid #6e60ff;
+  
+  }
+  .bordered {
+    border: 1px solid #6e60ff;
+    padding: 30px;
+    margin: 10px;
+}
+
+.btn-next{
+
+    background-color: white;
+    color: #6e60ff;
+    border: 1px solid #6e60ff; 
+   
+}
