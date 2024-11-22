@@ -71,6 +71,7 @@ function toggleSlide() {
 function showContainer(container) {
   let containers = document.querySelectorAll('.contain');
   let menus = document.querySelectorAll('.menu-item');
+  // AOS.init();
   // Hide all slides
   // console.log(123,container);
   const link = document.createElement('link');
@@ -81,6 +82,7 @@ function showContainer(container) {
   if(c=='myAcount'){
     showLoinForm();
   }
+  
   containers.forEach(contain => {
     if(contain.id === container){
       
@@ -88,8 +90,13 @@ function showContainer(container) {
       // contain.classList.remove('defult')
       if (!document.head.contains(link)) {
         document.head.appendChild(link);
-        console.log(222,link);
       }
+      // console.log(23524565,container);
+      // if(container=='sellerinstruction-container'){
+      //   bootstrap_link(true);
+      // }else{
+      //   bootstrap_link(false);
+      // }
     }
     else{
       contain.classList.remove('show')
@@ -111,5 +118,48 @@ function showContainer(container) {
     else
       menu.classList.remove('active');
   });
+
+
+}
+
+bootstrap_link = (remove = true)=>{
+  if(remove){
+    const bootstrapCSS = document.querySelector(
+      'link[href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"]'
+    );
+    if (bootstrapCSS) {
+      bootstrapCSS.remove();
+    }
+    const bootstrapJS = document.querySelector(
+      'script[src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"]'
+    );
+    if (bootstrapJS) {
+      bootstrapJS.remove();
+    }
+  }
+  else{
+    const bootstrapCSS = document.querySelector(
+      'link[href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"]'
+    );
+    if (!bootstrapCSS) {
+      const linkElement = document.createElement("link");
+      linkElement.rel = "stylesheet";
+      linkElement.href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css";
+      document.head.appendChild(linkElement);
+      console.log("Bootstrap 5.3.3 CSS added.");
+    }
+    const bootstrapJS = document.querySelector(
+      'script[src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"]'
+    );
+
+    if (!bootstrapJS) {
+      const scriptElement = document.createElement("script");
+      scriptElement.src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js";
+      document.head.appendChild(scriptElement);
+      console.log("Bootstrap 5.3.3 JS added.");
+    }
+  }
+  
+
 }
 

@@ -230,7 +230,7 @@
                 <br>
                 <br>
                 <div class="d-flex justify-content-between ">
-                  <input class="backS" type="button" value="ថយក្រោយ" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" class="backS" data-bs-dismiss="modal">
+                  <input class="backS" type="button" value="ថយក្រោយ"  data-bs-dismiss="modal">
                   <input class="submitS" type="submit" value="បន្ទាប់" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
                 </div>
               </div>
@@ -281,8 +281,8 @@
                   យ៉ាងដូចម្តេច </p>
               <img class="CMiD" src="seller_register/image/CMiD.svg" alt="CMiD">
               <div class="group_button">
-                  <input class="backS" type="button" value="ថយក្រោយ" data-bs-target="#exampleModalToggle1" data-bs-toggle="modal" data-bs-dismiss="modal">
-                  <input onclick="accessCamera()" class="submitS" type="submit" value="ផ្ទៀងផ្ទាត់ឥឡូវ" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal" data-bs-dismiss="modal">
+                  <input class="backS" type="button" value="ថយក្រោយ"  data-bs-dismiss="modal" >
+                  <input onclick="accessCamera()" class="submitS" type="submit" value="ផ្ទៀងផ្ទាត់ឥឡូវ" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">
               </div>
           </div>
       </div>
@@ -302,9 +302,8 @@
                   <video id="video" width="640" height="480" autoplay></video>
               </div>
               <div class="controls">
-                  <button id="captureButton" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">ថយក្រោយ</button>
-                  <!-- <button id="captureButton" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal" data-bs-dismiss="modal">​​​​​​ចុចថត​</button> -->
-                  <button id="captureButton" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal" data-bs-dismiss="modal">​​​​​​ចុចថត​</button>"
+                  <input class="backS" type="button" value="ថយក្រោយ" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">
+                  <button id="captureButton" class="submitS" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal" data-bs-dismiss="modal">​​​​​​ចុចថត​</button>
               </div>
               <div class="camerap">
                   <p>បញ្ចាក់មុខរបស់លោកអ្នកជាមួយអត្តសញ្ញាណប័ណ្ធ</p>
@@ -314,32 +313,123 @@
     </div>
   </div>
 </div>
-<div class="modal fade" id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3" tabindex="-1">
+<div class="modal fade" id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
     <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
       <div class="modal-content">
         
         <div class="modal-body">
-            <div class="camera-container">
-                <div class="camerat">
-                    <h1>ផ្ទៀងផ្ទាត់មុខ</h1>
-                    </div>
-                <div class="camera">
-                    <video id="video" width="640" height="480" autoplay></video>
+            <div class="container">
+                <h2 class="titleS">ចុះឈ្មោះជាអ្នកលក់នៅក្នុងLURKKORBSOP</h2>
+                <hr>
+                <!-- Input Fields -->
+                <div class="dropdown-group">
+                    <label for="category">ប្រភេទទំនិញ</label>
+                    <select id="category">
+                      <option value="cat1">Option 1</option>
+                      <option value="cat2">Option 2</option>
+                      <option value="cat3">Option 3</option>
+                    </select>
+                  </div>
+                <div class="input-group">
+                  <label for="subtitle">ចំណងជើង</label>
+                  <input type="text" id="subtitle" placeholder="បញ្ចូលចំណងជើង">
                 </div>
-                <div class="controls">
-                    <button id="captureButton" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal" data-bs-dismiss="modal">ថយក្រោយ</button>
-                    <!-- <button id="captureButton" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal" data-bs-dismiss="modal">​​​​​​ចុចថត​</button> -->
-                    <button id="captureButton" onclick="showContainer('seller-container')" data-bs-dismiss="modal">​​​​​​ចុចថត​</button>"
+                <hr>
+            
+                <!-- Dropdown Group -->
+                <div class="dropdown-group-wrapper">
+                  <div class="dropdown-group">
+                    <label for="quantity">ចំនួនអត្ថបទ</label>
+                    <select id="quantity">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="6">4</option>
+                      <option value="7">5</option>
+                      <option value="8">6</option>
+                    </select>
+                  </div>
+                  <div class="dropdown-group">
+                    <label for="category">តម្លៃ</label>
+                    <input id="category">
+                  </div>
+                  <div class="dropdown-group">
+                    <label for="percentage">បញ្ចុះតម្លៃ</label>
+                    <select id="percentage">
+                      <option value="90">90%</option>
+                      <option value="80">80%</option>
+                      <option value="70">70%</option>
+                      <option value="none">None</option>
+                    </select>
+                  </div>
+                  <div class="dropdown-group">
+                    <label for="payment">ទូទាត់ប្រាក់</label>
+                    <select id="payment" multiple>
+                      <option value="aba">ABA</option>
+                      <option value="paypal">PayPal</option>
+                      <option value="visa">Visa</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="camerap">
-                    <p>បញ្ចាក់មុខរបស់លោកអ្នកជាមួយអត្តសញ្ញាណប័ណ្ធ</p>
+                <hr>
+            
+                <!-- Textarea -->
+                <div class="textarea-group">
+                  <label for="description">ពិពណ៌នាអត្ថបទ</label>
+                  <textarea id="description" rows="3" placeholder="បញ្ចូលពិពណ៌នាអត្ថបទ"></textarea>
+                </div>
+            
+                <!-- Contact Details -->
+                <div class="contact-details">
+                  <label for="email">ព័តមានទំនាក់ទំនង</label>
+                  <div class="contact-inputs">
+                    <input type="email" id="email" placeholder="Email">
+                    <select id="country-code">
+                      <option value="+855">🇰🇭 +855</option>
+                      <option value="+1">🇺🇸 +1</option>
+                      <option value="+44">🇬🇧 +44</option>
+                    </select>
+                    <input type="tel" id="phone" placeholder="បញ្ចូលលេខទូរស័ព្ទ">
+                  </div>
+                </div>
+            
+                <!-- Full Content -->
+                <div class="image-upload">
+                    <label for="product-image">បញ្ចូលរូបភាពពីឧបករណ៍</label>
+                    <input type="file" id="product-image" accept="image/*" multiple>
+                </div>
+                <!-- Display Uploaded Images -->
+                <div class="image-preview" id="image-preview-container">
+                    <!-- Images will be appended here -->
+                </div>
+              
+            
+            <!-- Image Cropper Modal -->
+            <div id="cropper-modal" style="display: none;">
+                <div class="modal-content">
+                    <span id="close-modal">&times;</span>
+                    <img id="cropper-image" src="#" alt="Image to Crop">
+                    <button id="crop-button">Crop</button>
                 </div>
             </div>
+            <br>    
+
+            <div class="button-container">
+              <button class="btn btn-outline" id="captureButton" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal" data-bs-dismiss="modal">ថយក្រោយ</button>
+              <button class="btn btn-solid" onclick="showContainer('seller-container')" id="seller" data-bs-dismiss="modal">ដាក់លក់</button>
+            </div>
+            <hr>
+            <label class="product-end">ចុះឈ្មោះគណនីអ្នកលក់អាជីវកម្ម ឬស្វែងយល់បន្ថែមអំពីគណនីអាជីវកម្ម</label>
+          </div>
         </div>
       </div>
     </div>
   </div>
-<div class="modal fade d-none" id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
+
+
+
+
+<div class="modal fade d-none" id="exampleModalToggle5" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
   <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-body">

@@ -95,7 +95,7 @@
     color: #333;
   }
   
-  select {
+  .register-form select {
     position: absolute;
     top: 0;
     left: 0;
@@ -106,7 +106,7 @@
     z-index: 1;
   }
   
-  select:focus {
+  .register-form select:focus {
     outline: none;
   }
   

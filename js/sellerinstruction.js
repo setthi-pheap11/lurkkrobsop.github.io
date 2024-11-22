@@ -23,3 +23,58 @@ accessCamera = ()=>{
     });
 }
 
+let cropper;
+let currentFile;
+document.getElementById('product-image').addEventListener('change', function(event) {
+  const files = event.target.files;
+  if (files.length > 0) {
+    currentFile = files[0];
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const cropperImage = document.getElementById('cropper-image');
+      cropperImage.src = e.target.result;
+      document.getElementById('cropper-modal').style.display = 'block';
+      cropper = new Cropper(cropperImage, {
+        aspectRatio: 1,
+        viewMode: 1,
+      });
+    };
+    reader.readAsDataURL(currentFile);
+  }
+});
+
+document.getElementById('close-modal').addEventListener('click', function() {
+  document.getElementById('cropper-modal').style.display = 'none';
+  cropper.destroy();
+});
+
+document.getElementById('crop-button').addEventListener('click', function() {
+  const canvas = cropper.getCroppedCanvas();
+  const previewContainer = document.getElementById('image-preview-container');
+  const img = document.createElement('img');
+  img.src = canvas.toDataURL();
+  img.style.maxWidth = '100%';
+  img.style.height = 'auto';
+  previewContainer.appendChild(img);
+  document.getElementById('cropper-modal').style.display = 'none';
+  cropper.destroy();
+
+  // Process next file if available
+  const files = document.getElementById('product-image').files;
+  const currentIndex = Array.from(files).indexOf(currentFile);
+  if (currentIndex + 1 < files.length) {
+    currentFile = files[currentIndex + 1];
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const cropperImage = document.getElementById('cropper-image');
+      cropperImage.src = e.target.result;
+      document.getElementById('cropper-modal').style.display = 'block';
+      cropper = new Cropper(cropperImage, {
+        aspectRatio: 1,
+        viewMode: 1,
+      });
+    };
+    reader.readAsDataURL(currentFile);
+  }
+});
+
