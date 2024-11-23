@@ -4,6 +4,7 @@
 @import "https://fonts.googleapis.com/css2?family=Moul&display=swap";
 @import "https://fonts.googleapis.com/css?family=Battambang";
 @import "https://fonts.googleapis.com/css?family=Roboto";
+@import "https://fonts.googleapis.com/css?family=Open+Sans:400,300,700";
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
@@ -408,7 +409,7 @@ ul {
 }
 
 .veiw-order-summary{
-  /* display: none; */
+  display: none;
   position: absolute;
   right: 0;
   background-color: white;
@@ -417,6 +418,11 @@ ul {
   overflow: hidden;
   z-index: 999;
   color: #004664;
+}
+
+#shopping:hover .veiw-order-summary{
+  display: block;
+  
 }
 
 .main-contain {
@@ -873,7 +879,22 @@ left:100%;
     align-items: center;
   }
 
-  
+  .item-image{
+    position: relative;
+  }
+  .order-number {
+    width: 25px;
+    height: 25px;
+    background-color: #A96AE6;
+    color: white;
+    position: absolute;
+    z-index: 9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    top: -5px;
+    right: -5px;
+    text-align: center;
+    border-radius: 50%;
+  }
 
   @media (max-width: 760px) {
     .swiper-button-next {
