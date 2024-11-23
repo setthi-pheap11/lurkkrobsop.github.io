@@ -117,6 +117,40 @@
         })
         .catch(error => console.error(error));
 
+       // Fetch food instructions
+       fetch('pages/food.html')
+       .then(response => {
+         if (!response.ok) {
+           throw new Error('Error fetching food instructions: ' + response.status);
+         }
+         return response.text();
+       })
+       .then(data => {
+         document.getElementById('food-container').innerHTML = data;
+         const script = document.createElement('script');
+         script.src = 'js/fashion.js';  // Path to your Swiper JS file
+         if(document.head.contains(script)) return;
+         document.body.appendChild(script);  // Append the script to the body or head
+       })
+       .catch(error => console.error(error));
+
+       // Fetch software instructions
+       fetch('pages/software.html')
+       .then(response => {
+         if (!response.ok) {
+           throw new Error('Error fetching software instructions: ' + response.status);
+         }
+         return response.text();
+       })
+       .then(data => {
+         document.getElementById('software-container').innerHTML = data;
+         const script = document.createElement('script');
+         script.src = 'js/fashion.js';  // Path to your Swiper JS file
+         if(document.head.contains(script)) return;
+         document.body.appendChild(script);  // Append the script to the body or head
+       })
+       .catch(error => console.error(error));
+
         // Fetch test instructions
       fetch('pages/test.html')
         .then(response => {
