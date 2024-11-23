@@ -2,6 +2,18 @@
 <html lang="en">
   <head>
     <base href="/" />
+    <script>
+      // if (window.location.hostname === "setthi-pheap11.github.io") {
+      //   document.querySelector('base').setAttribute('href', '/lurkkrobsop.github.io/');
+      //   console.log(window.location.hostname);
+      // }
+      if (window.location.hostname === "setthi-pheap11.github.io") {
+        document.write('<base href="/lurkkrobsop.github.io/">');
+      } else {
+        document.write('<base href="/">');
+      }
+      console.log(window.location.hostname);
+    </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,16 +40,7 @@
     <link rel="stylesheet" href="css/Swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="AOS/aos.css" />
 
-    <script>
-      if (window.location.hostname === "setthi-pheap11.github.io") {
-        document.querySelector('base').setAttribute('href', '/lurkkrobsop.github.io/');
-      }
-      // if (window.location.hostname === "setthi-pheap11.github.io") {
-      //   document.write('<base href="/lurkkrobsop.github.io/">');
-      // } else {
-      //   document.write('<base href="/">');
-      // }
-    </script>
+    
     <script src="js/Jquery/jquery-3.7.1.min.js"></script>
   <style>
     .skiptranslate{
