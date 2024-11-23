@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/Phady/CSS/Checkout Page.css">
+<title>Checkout Page</title>
+
+</head>
+<body>
+   
+
+    <div class="container">
+        
+        <div class="billing-details">
+            <h3>Billing Detail</h3>
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" placeholder="Enter Name">
+            
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" placeholder="Enter Name">
+            
+            <label for="country">Country / Region</label>
+            <select id="country">
+                <option value="" disabled selected>Select Country</option>
+                <option value="brunei">Brunei</option>
+                <option value="cambodia">Cambodia</option>
+                <option value="indonesia">Indonesia</option>
+                <option value="laos">Laos</option>
+                <option value="malaysia">Malaysia</option>
+                <option value="myanmar">Myanmar</option>
+                <option value="philippines">Philippines</option>
+                <option value="singapore">Singapore</option>
+                <option value="thailand">Thailand</option>
+                <option value="vietnam">Vietnam</option>
+
+            </select>
+
+            <label for="Province">Province</label>
+            <select id="country">
+                <option value="" disabled selected>Select Province</option>
+                <option value="banteay_meanchey">Banteay Meanchey</option>
+                <option value="battambang">Battambang</option>
+                <option value="kampong_cham">Kampong Cham</option>
+                <option value="kampong_chhnang">Kampong Chhnang</option>
+                <option value="kampong_speu">Kampong Speu</option>
+                <option value="kampong_thom">Kampong Thom</option>
+                <option value="kampot">Kampot</option>
+                <option value="kandal">Kandal</option>
+                <option value="kep">Kep</option>
+                <option value="koh_kong">Koh Kong</option>
+                <option value="kratie">Kratie</option>
+                <option value="mondulkiri">Mondulkiri</option>
+                <option value="oddar_meanchey">Oddar Meanchey</option>
+                <option value="pailin">Pailin</option>
+                <option value="phnom_penh">Phnom Penh</option>
+                <option value="preah_vihear">Preah Vihear</option>
+                <option value="prey_veng">Prey Veng</option>
+                <option value="pursat">Pursat</option>
+                <option value="ratanakiri">Ratanakiri</option>
+                <option value="siem_reap">Siem Reap</option>
+                <option value="preah_sihanouk">Preah Sihanouk</option>
+                <option value="stung_treng">Stung Treng</option>
+                <option value="svay_rieng">Svay Rieng</option>
+                <option value="takéo">Takéo</option>
+                <option value="tboung_khmum">Tboung Khmum</option>
+
+
+            </select>
+            
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter">
+            
+            <label for="address">Address</label>
+            <input type="text" id="address" placeholder="Enter your address">
+            
+         
+            <div class="payment-method">
+                <h3>Select Payment Method</h3>
+                <label><input type="radio" name="payment" checked> <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="Mastercard"> **** **** 3732</label>
+                <label><input type="radio" name="payment"> Add new card</label>
+            </div>
+        </div>
+
+      
+        <div class="order-summary">
+            <h2>Have a Coupon?</h2>
+            <form class="coupon-form">
+              <input
+                type="text"
+                class="coupon-input"
+                placeholder="Add Coupon"
+                aria-label="Enter coupon code"
+              >
+              <button type="button" class="apply-button">Apply</button>
+            </form>
+
+             <br>
+
+                <h1>Order Summary</h1>
+                <br>
+                <div class="item">
+                    <br>
+                    <div class="item-image">
+                        <img src="https://m.media-amazon.com/images/I/61-5D5L20+L._AC_UY327_FMwebp_QL65_.jpg" alt="Gaming Headset">
+                    </div>
+                    <div class="item-details">
+                        <p class="item-title">Gaming Headset</p>
+                        <p class="item-color">Color: Blue</p>
+                    </div>
+                    <div class="item-price">
+                        <p>$17.00</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTox7XJZequk1cO6m8ywvILfepkqSwrXCudEDAm44qt_OYPMJLk" alt="Watch">
+                    </div>
+                    <div class="item-details">
+                        <p class="item-title">Watch</p>
+                        <p class="item-color">Titanium Silver</p>
+                    </div>
+                    <div class="item-price">
+                        <p>$499.00</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-image">
+                        <img src="https://m.media-amazon.com/images/I/51rkKPruYvL._AC_UL480_FMwebp_QL65_.jpg" alt="Shirt">
+                    </div>
+                    <div class="item-details">
+                        <p class="item-title">Shirt</p>
+                        <p class="item-color">White Color</p>
+                    </div>
+                    <div class="item-price">
+                        <p>$18.00</p>
+                    </div>
+                </div>
+                <div class="payment-details">
+                    <div class="payment-row">
+                        <p>Sub total</p>
+                        <p>$534.00</p>
+                    </div>
+                    <div class="payment-row">
+                        <p>Delivery Fee</p>
+                        <p>$1.00</p>
+                    </div>
+                    <div class="payment-row">
+                        <p>Discount</p>
+                        <p>$0.00</p>
+                    </div>
+                    <div class="payment-row total">
+                        <p>Total</p>
+                        <p>$535.00</p>
+                    </div>
+                    <button class="pay-now-btn">Pay Now</button>
+                </div>
+          </div>
+        </div>
+    </div>
+</body>
+</html>
