@@ -164,6 +164,19 @@
         })
         .catch(error => console.error(error));
       
+        // Fetch test instructions
+      fetch('pages/shopping.html')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Error fetching shopping instructions: ' + response.status);
+        }
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById('shopping-container').innerHTML = data;
+      })
+      .catch(error => console.error(error));
+
       // Fetch seller instructions
       fetch('pages/seller.html')
         .then(response => {
