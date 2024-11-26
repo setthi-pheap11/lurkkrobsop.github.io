@@ -1,9 +1,11 @@
-const btn = document.querySelector('.btn-login');
+const btnLogin = document.querySelector('.btn-login');
+const btnRegister = document.querySelector('.btn-register');
 
 showLoinForm = ()=>{
-    if (btn) {
+    if (btnRegister) {
         setTimeout(function() {
-            btn.click();
+            // btn.click();
+            btnRegister.click();
         }, 500); // 500 milliseconds = 0.5 seconds
     } else {
         console.log("Button not found");

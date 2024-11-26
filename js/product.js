@@ -267,26 +267,48 @@ const products = {
     const product = products[productId];
 
     if (product) {
-      productList.classList.add("hidden");
-      productDetail.classList.remove("hidden");
+      // productList.classList.add("hidden");
+      // productDetail.classList.remove("hidden");
       
-
-      productName.textContent = product.name;
-      productDescription.textContent = product.description;
-      productPrice.textContent = product.price;
-      productImage.src = product.imageUrl;
-      productImage.alt = product.name;
-      shopname.textContent = product.shopname;
-      open.textContent = product.open;
-      disccount.textContent = product.discount;
-      promotion.textContent = product.promotion;
-      productImage1.src = product.smallimage1;
-      productImage2.src = product.smallimage2;
+      setData(product);
+      showContainer('detail-container',false);
     }
   });
 
-  backButton.addEventListener("click", () => {
-    productDetail.classList.add("hidden");
-    productList.classList.remove("hidden");
-  });
+  // backButton.addEventListener("click", () => {
+  //   productDetail.classList.add("hidden");
+  //   productList.classList.remove("hidden");
+  // });
 // });
+setData = (product)=>{
+  productName.textContent = product.name;
+  productDescription.textContent = product.description;
+  productPrice.textContent = product.price;
+  productImage.src = product.imageUrl;
+  productImage.alt = product.name;
+  shopname.textContent = product.shopname;
+  open.textContent = product.open;
+  disccount.textContent = product.discount;
+  promotion.textContent = product.promotion;
+  productImage1.src = product.smallimage1;
+  productImage2.src = product.smallimage2;
+}
+
+let body = document.querySelector('body');
+const backBtn = document.getElementById("back-btn");
+body.addEventListener("click", (e) => {
+  e.preventDefault();
+  const productCard = e.target.closest(".item-product");
+    if (productCard){
+      // const productId = productCard.getAttribute("data-product-id");
+      const product = products[5];
+      setData(product);
+    }else return;
+  showContainer('detail-container',false);
+});
+
+goBack = () => {
+  let module = document.getElementById("qty").value;
+  showContainer(module+'-container');
+};
+

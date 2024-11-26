@@ -1,9 +1,8 @@
-// setTop = ()=>{
-    var navbar_hight = document.getElementById('navbar').offsetHeight;
-    console.log(2323, navbar_hight);
-    // document.getElementById('margin-top').style.height = navbar_hight + 'px';
-// }
-// setTop();
+
+var navbar_hight = document.getElementById('navbar').offsetHeight;
+
+  if(module)
+  showContainer(module+'-container');
 
 window.onscroll = function() {
 

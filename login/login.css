@@ -25,7 +25,7 @@
     height: 100%;
 }
 
-.login-box {
+.login-box ,.register-box{
     background-color: rgba(255, 255, 255, 0.1);
     padding: 40px 50px;
     border-radius: 30px ;
@@ -34,6 +34,9 @@
     text-align: center;
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.register-box{
+    max-height: 500px;
 }
 
 .info-box {
@@ -51,7 +54,7 @@
     color: white;
 }
 
-.login-box h1 {
+.login-box h1 ,.register-box h1 {
     font-size: 2.3rem;
     color: white;
     font-weight: bolder;
@@ -61,13 +64,13 @@
     font-size: 3rem;
 }
 
-.login-box p {
+.login-box p ,.register-box p{
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 30px;
     font-weight: 500;
 }
 
-.login-box span {
+.login-box span ,.register-box span{
     color: rgba(255, 255, 255, 0.7);
     font-size: .9rem;
 }
@@ -91,7 +94,7 @@
     font-size: 1rem;
 }
 
- button {
+.info-box button, .login-box button ,.register-box button{
     background-color: #f05c4e;
     border: none;
     padding: 5px 10px;
@@ -102,7 +105,7 @@
     cursor: pointer;
 }
 
- button:hover {
+.info-box button, .login-box button:hover ,.register-box button:hover {
     background-color: #d9493b;
 }
 

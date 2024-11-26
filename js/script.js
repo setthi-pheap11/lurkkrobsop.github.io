@@ -1,5 +1,7 @@
-let lastContain = '';
+
 // var selectField = document.querySelector('.goog-te-combo');
+let module = document.getElementById("qty").value;
+  console.log(2343546565,module+'-container');
 
 function translateToKhmer() {
   // Find the hidden Google Translate dropdown
@@ -68,9 +70,10 @@ function toggleSlide() {
   }
 }
 
-function showContainer(container) {
+function showContainer(container,chengMenus = true) {
   let containers = document.querySelectorAll('.contain');
   let menus = document.querySelectorAll('.menu-item');
+
   // AOS.init();
   // Hide all slides
   // console.log(123,container);
@@ -87,6 +90,10 @@ function showContainer(container) {
     if(contain.id === container){
       
       contain.classList.add('show')
+      if(c != 'detail'){
+        document.getElementById("qty").value = c;
+      }
+
       // contain.classList.remove('defult')
       if (!document.head.contains(link)) {
         document.head.appendChild(link);
@@ -112,54 +119,36 @@ function showContainer(container) {
     }
   });
 
-  menus.forEach(menu => {
-    if(menu.id === container.split('-')[0])
-      menu.classList.add('active');
-    else
-      menu.classList.remove('active');
-  });
-
-
-}
-
-bootstrap_link = (remove = true)=>{
-  if(remove){
-    const bootstrapCSS = document.querySelector(
-      'link[href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"]'
-    );
-    if (bootstrapCSS) {
-      bootstrapCSS.remove();
-    }
-    const bootstrapJS = document.querySelector(
-      'script[src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"]'
-    );
-    if (bootstrapJS) {
-      bootstrapJS.remove();
-    }
-  }
-  else{
-    const bootstrapCSS = document.querySelector(
-      'link[href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"]'
-    );
-    if (!bootstrapCSS) {
-      const linkElement = document.createElement("link");
-      linkElement.rel = "stylesheet";
-      linkElement.href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css";
-      document.head.appendChild(linkElement);
-      console.log("Bootstrap 5.3.3 CSS added.");
-    }
-    const bootstrapJS = document.querySelector(
-      'script[src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"]'
-    );
-
-    if (!bootstrapJS) {
-      const scriptElement = document.createElement("script");
-      scriptElement.src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js";
-      document.head.appendChild(scriptElement);
-      console.log("Bootstrap 5.3.3 JS added.");
-    }
+  if(chengMenus){
+    menus.forEach(menu => {
+      if(menu.id == container.split('-')[0])
+        menu.classList.add('active');
+      else
+        menu.classList.remove('active');
+    });
   }
   
 
 }
+
+//store value after changes
+function store(text){
+  var text = document.getElementById("qty").value;
+  localStorage.setItem("qty",text);
+}
+//local storage to keep values after refresh
+function getValue(){
+  var storedText = localStorage.getItem("qty");
+
+  if(storedText != null){
+      document.getElementById("qty").value = storedText; 
+  }
+  else
+      document.getElementById("qty").value = 0;
+}
+
+
+
+
+
 

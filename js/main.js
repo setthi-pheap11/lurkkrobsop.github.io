@@ -152,7 +152,7 @@
        .catch(error => console.error(error));
 
         // Fetch test instructions
-      fetch('pages/test.html')
+      fetch('pages/detail.html')
         .then(response => {
           if (!response.ok) {
             throw new Error('Error fetching test instructions: ' + response.status);
@@ -160,7 +160,7 @@
           return response.text();
         })
         .then(data => {
-          document.getElementById('test-container').innerHTML = data;
+          document.getElementById('detail-container').innerHTML = data;
         })
         .catch(error => console.error(error));
       
