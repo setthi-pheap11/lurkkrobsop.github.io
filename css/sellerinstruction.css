@@ -105,29 +105,44 @@ header {
 
 .grid-container, .grid-container1 {
     display: grid;
-    column-gap: 50px;
+    /* column-gap: 50px; */
     grid-template-columns: auto auto auto;
-    padding: 10px;
+    /* padding: 10px; */
     max-width: 1200px;
-    margin: 0 auto;
+    /* margin-: 20 auto; */
 }
 
 .grid-item, .grid-item1 {
-    padding: 20px;
+    /* padding: 20px; */
     font-size: 18px;
     text-align: left;
 }
 
-.grid-item1 {
+.grid-item img{
+    max-width: 100%;
+    width: 40px;
+}
+
+.grid-item,.grid-item1 {
     border-radius: 10px;
     background-color: #D9D9D9;
-    margin-top: 20px;
-    width: 96%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    /* width: 96%; */
     transition: transform 0.1s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-.grid-item1:hover {
+.grid-item{
+    background-color: unset;
+}
+
+#sellerinstruction-container .row {
+    margin-right: -11px;
+    margin-left: -11px;
+  }
+
+.grid-item:hover, .grid-item1:hover {
     transform: scale(1.05);
 }
 

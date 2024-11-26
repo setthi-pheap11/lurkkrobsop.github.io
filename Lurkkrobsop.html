@@ -30,6 +30,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/loading.css" />
+    <!-- <link rel="stylesheet" href="css/detail.css" /> -->
     <!-- <link rel="stylesheet" href="seller_register/CSS/Sellerinstruction.css"> -->
     <!-- <link rel="stylesheet" href="css/fashion.css" /> -->
     <!-- <link rel="stylesheet" href="css/test.css" /> -->
@@ -40,7 +41,6 @@
     <link rel="stylesheet" href="css/Swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="AOS/aos.css" />
 
-    
     <script src="js/Jquery/jquery-3.7.1.min.js"></script>
   <style>
     .skiptranslate{
@@ -51,7 +51,8 @@
     }
   </style>
   </head>
-  <body style="top: 0;">  
+  <body style="top: 0;">
+    <input type="hidden" id="qty" name="qty" class="small w-25 text-right" value="home">
      <!-- Loader -->
      <div id="loadingScreen">
         <div class="container-load">
@@ -80,21 +81,21 @@
     <div id="software-container" class="contain banner" >software Container </div>
     <div id="test-container" class="contain banner" >test Container </div>
     <div id="product-container" class="contain banner" >product Container </div>
+    <div id="detail-container" class="contain banner" >product Container </div>
     <div id="seller-container" class="contain banner" >seller Container </div>
 
     <div id="home-container" class="contain default banner">Home Container</div>
-   
+
     <div id="footer-container"></div> <!-- footer-container must be here -->
 
     <!-- script -->
     <script>
       $(window).on('load', function() {
           // Hide the loader and show the main content after the page loads
-          $("#loadingScreen").fadeOut(1000, function() {
+          $("#loadingScreen").fadeOut(2500, function() {
               $("#content").fadeIn(500); // Show the main content
           });
       });
-
     </script>
     <script src="AOS/aos.js"></script>
     <script>
