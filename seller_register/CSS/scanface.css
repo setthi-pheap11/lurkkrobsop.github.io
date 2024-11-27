@@ -1,0 +1,64 @@
+.camerat {
+    font-family: 'Khmer OS Siemreap', sans-serif;
+    
+}
+.camerap {
+    font-family: 'Khmer OS Siemreap', sans-serif;
+    font-size: 15px;
+    color: #ff0000;
+    
+}
+
+.camera {
+    font-family: 'Khmer OS Siemreap', sans-serif;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+}
+
+.modal-body {
+    font-family: 'Khmer OS Siemreap', sans-serif;
+    display: flex;
+    justify-content: center;
+
+    align-items: flex-start; /* Align items to the top */
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.camera-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 90px; /* Add some margin from the top */
+}
+
+.camera {
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    
+}
+
+#captureButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Khmer OS Siemreap', sans-serif;
+    cursor: pointer;
+}
+
+#captureButton:hover {
+    background-color: #0056b3;
+}

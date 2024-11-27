@@ -1,9 +1,12 @@
-let lastContain = '';
+
+// var selectField = document.querySelector('.goog-te-combo');
+let module = document.getElementById("qty").value;
+  console.log(2343546565,module+'-container');
 
 function translateToKhmer() {
   // Find the hidden Google Translate dropdown
   var selectField = document.querySelector('.goog-te-combo');
-  
+  console.log(8877,selectField);
   // Select the Khmer and English buttons
   const btnTKM = document.querySelector('.t-km'),  // Assuming .t-km is for Khmer
         btnTEN = document.querySelector('.t-en'),
@@ -13,7 +16,11 @@ function translateToKhmer() {
   if (selectField && selectField.value !== 'km') {
     selectField.value = 'km';  // Set to Khmer
     selectField.dispatchEvent(new Event('change'));  // Trigger translation
-    
+    if(selectField.value !== 'km'){
+      selectField.value = 'km';  // Set to Khmer
+      selectField.dispatchEvent(new Event('change'));
+    }
+      
     // Add background class to Khmer button, remove from English
     btnTKM.classList.add('bg-A96AE6');
     btnTEN.classList.remove('bg-A96AE6','text-white');
@@ -35,7 +42,10 @@ function translateToEnglish() {
   if (selectField && selectField.value !== 'en') {
     selectField.value = 'en';  // Set to English
     selectField.dispatchEvent(new Event('change'));  // Trigger translation
-    
+    if(selectField.value !== 'en'){
+      selectField.value = 'en';  // Set to Khmer
+      selectField.dispatchEvent(new Event('change'));
+    }
     // Add background class to English button, remove from Khmer
     btnTEN.classList.add('bg-A96AE6');
     btnTKM.classList.remove('bg-A96AE6','text-white');
@@ -60,30 +70,85 @@ function toggleSlide() {
   }
 }
 
-function showContainer(container) {
+function showContainer(container,chengMenus = true) {
   let containers = document.querySelectorAll('.contain');
   let menus = document.querySelectorAll('.menu-item');
-  // Hide all slides
-  console.log(123,container);
-  containers.forEach(contain => {
-  console.log(222,contain.id);
 
+  // AOS.init();
+  // Hide all slides
+  // console.log(123,container);
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  let c = container.replace("-container", "");
+  link.href = `css/${c}.css`;  
+  link.id = `${c}`;
+  if(c=='myAcount'){
+    showLoinForm();
+  }
+  
+  containers.forEach(contain => {
     if(contain.id === container){
+      
       contain.classList.add('show')
+      if(c != 'detail'){
+        document.getElementById("qty").value = c;
+      }
+
       // contain.classList.remove('defult')
+      if (!document.head.contains(link)) {
+        document.head.appendChild(link);
+      }
+      // console.log(23524565,container);
+      // if(container=='sellerinstruction-container'){
+      //   bootstrap_link(true);
+      // }else{
+      //   bootstrap_link(false);
+      // }
     }
     else{
       contain.classList.remove('show')
       contain.classList.remove('default')
+      const cid = contain.id.replace("-container", "");
+      const elink = document.head.querySelector(`#${cid}`);
+      if(cid != 'home' && cid != c){
+        if (document.head.contains(elink)) {
+          document.head.removeChild(elink);
+          console.log(333,elink);
+        }
+      }
     }
   });
 
-  menus.forEach(menu => {
-  console.log(333,menu.id);
+  if(chengMenus){
+    menus.forEach(menu => {
+      if(menu.id == container.split('-')[0])
+        menu.classList.add('active');
+      else
+        menu.classList.remove('active');
+    });
+  }
+  
 
-    if(menu.id === container.split('-')[0])
-      menu.classList.add('active');
-    else
-      menu.classList.remove('active');
-  });
 }
+
+//store value after changes
+function store(text){
+  var text = document.getElementById("qty").value;
+  localStorage.setItem("qty",text);
+}
+//local storage to keep values after refresh
+function getValue(){
+  var storedText = localStorage.getItem("qty");
+
+  if(storedText != null){
+      document.getElementById("qty").value = storedText; 
+  }
+  else
+      document.getElementById("qty").value = 0;
+}
+
+
+
+
+
+
