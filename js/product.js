@@ -298,10 +298,16 @@ let body = document.querySelector('body');
 const backBtn = document.getElementById("back-btn");
 body.addEventListener("click", (e) => {
   e.preventDefault();
-  const productCard = e.target.closest(".item-product");
+  const limitParent = document.querySelector(".product-thumb7"); // Define the limit parent
+    let productCard = closestLimited(e.target, ".item-product", limitParent);
+    if (productCard) {
+      const product = products[5];
+      setData(product);
+    }
+    productCard = e.target.closest(".product-thumb-link");
     if (productCard){
       // const productId = productCard.getAttribute("data-product-id");
-      const product = products[5];
+      const product = products[6];
       setData(product);
     }else return;
   showContainer('detail-container',false);
@@ -309,6 +315,14 @@ body.addEventListener("click", (e) => {
 
 goBack = () => {
   let module = document.getElementById("qty").value;
+  console.log(1233,module);
   showContainer(module+'-container');
 };
 
+function closestLimited(element, selector, limitParent) {
+  let current = element;
+  while (current && current !== limitParent && !current.matches(selector)) {
+    current = current.parentElement;
+  }
+  return current && current !== limitParent ? current : null;
+}
