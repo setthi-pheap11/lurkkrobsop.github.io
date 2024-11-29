@@ -125,7 +125,7 @@ header {
 
 .grid-item,.grid-item1 {
     border-radius: 10px;
-    background-color: #D9D9D9;
+    background-color: #ffffff;
     margin-top: 25px;
     margin-bottom: 25px;
     /* width: 96%; */
@@ -133,9 +133,9 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-.grid-item{
-    background-color: unset;
-}
+/* .grid-item{
+    background-color: rgba(255, 255, 255, 0.83);
+} */
 
 #sellerinstruction-container .row {
     margin-right: -11px;
