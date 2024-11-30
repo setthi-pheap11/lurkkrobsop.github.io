@@ -33,8 +33,60 @@ h1,h2,h3,h4,h5,h6{
     height: 25px;
 }
 
+.mb-2 .colorbox.box1{
+    background-color:#ffffff;
+}
+.mb-2 .colorbox.box2{
+    background-color:#e66054;
+}
+.mb-2 .colorbox.box3{
+    background-color:#d0b7cc;
+}
+.mb-2 .colorbox.box4{
+    background-color:#107a8e;
+}
+.mb-2 .colorbox.box5{
+    background-color:#b9cad2;
+}
+.mb-2 .colorbox.box6{
+    background-color:#a7bc93;
+}
+.mb-2 .colorbox.box7{
+    background-color:#d3b627;
+}
+
+.colorbox.box1{
+    background-color:#b4b3ae;
+}
+.colorbox.box2{
+    background-color:#502006;
+}
+.colorbox.box3{
+    background-color:#311e21;
+}
+.colorbox.box4{
+    background-color:#e6b3af;
+}
+.colorbox.box5{
+    background-color:#f3d213;
+}
+.colorbox.box6{
+    background-color:#bd0316;
+}
+.colorbox.box7{
+    background-color:#cd0c20;
+}
+
 .check-bar .input-filter{
     border: 1px solid #dee2e6;
+}
+
+.bg-warning{
+    background-color: #a96ae6 !important;
+}
+
+.bg-warning h4 , .bg-warning h2{
+    color: white !important;
 }
 
 .baner-img{
