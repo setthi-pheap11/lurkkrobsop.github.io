@@ -2,10 +2,17 @@
 @import url('../seller_register/CSS/cmfrom.css');
 @import url('../seller_register/CSS/scanface.css');
 @import url('../seller_register/CSS/sellform.css');
+@import "https://fonts.googleapis.com/css?family=Roboto";
 
-
+* {
+    font-family: Poppins, sans-serif, Hanuman, serif;
+    /* font-family: Roboto,sans-serif; */
+    letter-spacing: .2px;
+    /* font-weight: 600; */
+    /* color: #004664; */
+  }
 body {
-    font-family: "Khmer OS Siemreap", Arial, sans-serif;
+    /* font-family: "Khmer OS Siemreap", Arial, sans-serif; */
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -210,15 +217,14 @@ header {
 }
 .bank{
     /* max-width: 1400px; */
-   display: flex;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 200px;
+    /* gap: 200px; */
     margin: auto;
 }
-.img-bank{
+.bank .img-bank{
     width: 200px;
-    
 }
 .title-i{
     display: flex;

@@ -55,6 +55,10 @@ html{
   scrollbar-color: #a96ae6 #fff; /* Thumb color and track color */
   font-family:sans-serif;
 }
+/* h1,h2,h3,h4,h5,h6{
+  font-family: PT Serif,serif;
+  font-weight: 700;
+} */
 body {
   margin: 0;
   padding: 0;
@@ -86,10 +90,7 @@ body {
   overflow: hidden; /* Prevent scrolling while loading */
 }
 
-h1,h2,h3,h4,h5,h6{
-  font-family: PT Serif,serif;
-  font-weight: 700;
-}
+
 .h-color{
   color: #004664 !important;
 
@@ -495,7 +496,7 @@ ul {
   font-size: 16px;
 }
 
-.item-adv-simple a::before {
+.item-adv-simple div::before {
   border-bottom: 1px solid rgba(255, 255, 255, 0.8);
   border-top: 1px solid rgba(255, 255, 255, 0.8);
   bottom: 20px;
@@ -510,7 +511,7 @@ ul {
   z-index: 9;
 }
 
-.item-adv-simple a::after {
+.item-adv-simple div::after {
   border-left: 1px solid rgba(255, 255, 255, 0.8);
   border-right: 1px solid rgba(255, 255, 255, 0.8);
   bottom: 20px;
@@ -524,18 +525,22 @@ ul {
   z-index: 9;
 }
 
-.item-adv-simple  a {
+div img{
+  cursor: pointer;
+}
+
+.item-adv-simple div {
   display: block;
 position:relative;
 overflow:hidden;
   height: 100%;
 }
-.item-adv-simple  a img{
+.item-adv-simple div img{
 width:100%;
   height: 100%;
 }
 
-.item-adv-simple  a:hover::before ,.item-adv-simple  a:hover::after{
+.item-adv-simple div:hover::before ,.item-adv-simple div:hover::after{
   -webkit-transform: scale(1);
   transform: scale(1);
   -webkit-transition: all 0.3s ease-out 0s;
