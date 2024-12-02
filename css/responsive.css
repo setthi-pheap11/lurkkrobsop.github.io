@@ -72,7 +72,7 @@
     .product-catagory-name,.product-type-name{
         width: 100% !important;
     }
-    .cont-left {
+    .midle-item .cont-left {
         display: none;
     }
     .cont-center,.cont-rigth{
@@ -90,6 +90,17 @@
     }
     .swiper-button-next,.swiper-button-prev{
         display: none!important;
+    }
+    .footer .d-flex{
+        flex-wrap: wrap;
+    }
+    .footer .cont-left ,.footer .cont-rigth{
+        width: 100%!important;
+        text-align: center;
+    }
+    .footer .cont-rigth.d-flex.justify-content-end{
+        display: flex;
+        justify-content: center!important;
     }
 }
 @media (max-width:360px) {
