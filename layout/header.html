@@ -1,224 +1,436 @@
 <!-- <div id="google_translate_element" style="display:none;"></div> -->
-<div class="navbar navbar-top navbar-dark" id="">
-  <div class="container">
-    <div class="header d-flex w-100">
-      <div class="cont-left w-50">
-        <div class="d-flex justify-content-start gap-2 align-items-center">
-          <i class="fa-solid fa-square-phone fs-6 c-A96AE6"></i>
-          <span>Call 24/7: 040 3824 668</span>
-          <line></line>
-          <i class="fa-solid fa-circle-info fs-6 c-A96AE6"></i>
-          <a href="#"><span>About Us</span></a>
-        </div>
-      </div>
-      <div class="cont-rigth top-info w-50">
-        <div class="d-flex justify-content-end align-items-center gap-2 w-100">
-          <div onclick="showContainer('sellerinstruction-container')" id="sellerinstruction"
-            class="menu-item d-flex gap-2">
-            <i class="fa-solid fa-id-card fs-5 c-A96AE6"></i>
-            <span>Seller Register</span>
-          </div>
-          <line></line>
-          <div onclick="showContainer('myAcount-container')" id="myAcount" class="menu-item d-flex gap-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <i class="fa-solid fa-user fs-6 c-A96AE6"></i>
-            <span>My Account</span>
+<div class="d-none d-sm-block">
+  <div class="navbar navbar-top navbar-dark" id="">
+    <div class="container">
+      <div class="header d-flex w-100">
+        <div class="cont-left w-50">
+          <div class="d-flex justify-content-start gap-2 align-items-center">
+            <i class="fa-solid fa-square-phone fs-6 c-A96AE6"></i>
+            <span>Call 24/7: 040 3824 668</span>
             <line></line>
+            <i class="fa-solid fa-circle-info fs-6 c-A96AE6"></i>
+            <a href="#"><span>About Us</span></a>
           </div>
-          <div class="top-language has-child">
-            <a href="#" class="language-selected d-flex gap-2 align-items-center">
-              <i class="fa-solid fa-earth-americas fs-6 c-A96AE6"></i>
-              <span id="_lang_used">English</span>
-              <i class="fa-solid fa-chevron-down"></i>
-            </a>
-            <ul class="sub-menu-top">
-              <li onclick="translateToEnglish()" class="t-en bg-A96AE6 c-A96AE6">
-                <span class="text-nowrap"><img src="images/home/flag-usa.png" alt="" />English</span>
-              </li>
-              <li onclick="translateToKhmer()" class="t-km c-A96AE6">
-                <span><img src="images/home/Khmer-flag.png" alt="" />Khmer</span>
-              </li>
-            </ul>
-
+        </div>
+        <div class="cont-rigth top-info w-50">
+          <div class="d-flex justify-content-end align-items-center gap-2 w-100">
+            <div onclick="showContainer('sellerinstruction-container')" id="sellerinstruction"
+              class="menu-item d-flex gap-2">
+              <i class="fa-solid fa-id-card fs-5 c-A96AE6"></i>
+              <span>Seller Register</span>
+            </div>
+            <line></line>
+            <div onclick="showContainer('myAcount-container')" id="myAcount" class="menu-item d-flex gap-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <i class="fa-solid fa-user fs-6 c-A96AE6"></i>
+              <span>My Account</span>
+              <line></line>
+            </div>
+            <div class="top-language has-child">
+              <a href="#" class="language-selected d-flex gap-2 align-items-center">
+                <i class="fa-solid fa-earth-americas fs-6 c-A96AE6"></i>
+                <span id="_lang_used">English</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </a>
+              <ul class="sub-menu-top">
+                <li onclick="translateToEnglish()" class="t-en bg-A96AE6 c-A96AE6">
+                  <span class="text-nowrap"><img src="images/home/flag-usa.png" alt="" />English</span>
+                </li>
+                <li onclick="translateToKhmer()" class="t-km c-A96AE6">
+                  <span><img src="images/home/Khmer-flag.png" alt="" />Khmer</span>
+                </li>
+              </ul>
+  
+            </div>
+  
+            <line></line>
+  
+            <div class="top-currency has-child">
+              <a href="#" class="currency-selected d-flex gap-2 align-items-center">
+                <i class="fa fa-usd fs-6 c-A96AE6"></i>
+                <span>USD</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </a>
+              <ul class="sub-menu-top">
+                <li class="bg-A96AE6 text-white">
+                  <a href="#"><span class="fs-6">$</span>USD</a>
+                </li>
+                <li>
+                  <a href="#"><span class="fs-5">៛</span>Real</a>
+                </li>
+              </ul>
+            </div>
           </div>
-
-          <line></line>
-
-          <div class="top-currency has-child">
-            <a href="#" class="currency-selected d-flex gap-2 align-items-center">
-              <i class="fa fa-usd fs-6 c-A96AE6"></i>
-              <span>USD</span>
-              <i class="fa-solid fa-chevron-down"></i>
-            </a>
-            <ul class="sub-menu-top">
-              <li class="bg-A96AE6 text-white">
-                <a href="#"><span class="fs-6">$</span>USD</a>
-              </li>
-              <li>
-                <a href="#"><span class="fs-5">៛</span>Real</a>
-              </li>
-            </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark my-2 mx-1 p-0 rounded-4" id="navbar" >
+    <div class="container">
+      <div class="menu d-flex w-100">
+        <div class="cont-left w-25">
+          <div class="d-flex">
+            <div class="home_logo">
+              <a href="#" onclick="showContainer('home-container')" class="d-flex justify-content-start align-items-end">
+                <img class="mb-2" src="images/home/main_logo.png" alt="" />
+                <img class="mb-1" src="images/home/លក់គ្រប់សព្វ.png" alt="" style="width: 40%;margin-left: -10px;">
+                <!-- <span class="fs-6 text-white text-norap" style="margin-left: -20px">លក់គ្រប់សព្វ</span> -->
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="cont-rigth d-flex w-75 ps-5">
+          <div class="contain-menu d-flex justify-content-between align-items-center w-100 ps-5">
+            <div>
+              <div onclick="showContainer('home-container')" id="home" class="menu-item active">
+                <span class="">Home</span>
+              </div>
+            </div>
+            <div>
+              <div onclick="showContainer('fashion-container')" id="fashion" class="menu-item">
+                <span class="menu-item">Fashion</span>
+              </div>
+            </div>
+            <div>
+              <div onclick="showContainer('electronis-container')" id="electronis" class="menu-item">
+                <span class="menu-item">Phone</span>
+              </div>
+            </div>
+            <div>
+              <div onclick="showContainer('sports-container')" id="sports" class="menu-item">
+                <span class="menu-item">Sports</span>
+              </div>
+            </div>
+            <div>
+              <div onclick="showContainer('food-container')" id="food" class="menu-item">
+                <span class="menu-item">Food</span>
+              </div>
+            </div>
+            <div>
+              <div onclick="showContainer('software-container')" id="software" class="menu-item">
+                <span class="menu-item">Software</span>
+              </div>
+            </div>
+            <div>
+              <div class="d-flex justify-content-center align-items-center" style="position: relative;">
+                <!-- <input onchange="showContainer('product-container')" id="_el_search" type="search"
+                  class=" form-control rounded-5 fade data-input" data-field="search_value"
+                  placeholder="Search Product" />
+                <span onclick="toggleSlide()" id="_btn_search" class="menu-item ">
+                  <i class="fa-solid fa-magnifying-glass" style="cursor: pointer;"></i>
+                </span> -->
+                <span onclick="showContainer('product-container')" id="product" class="menu-item ">
+                  <i class="fa-solid fa-magnifying-glass" style="cursor: pointer;"></i>
+                </span>
+              </div>
+            </div>
+            <div>
+              <div onclick="showContainer('shopping-container')" id="shopping" class="menu-item">
+                <span class="">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+                <div class="veiw-order-summary box-shadow-dark rounded-5 ">
+                  <div class="title w-50 mx-auto mt-0">
+                    <span class="d-block fs-5 text-nowrap bg-dark rounded-bottom-4 text-white lh-1 text-center p-2">Order Summary</span>
+                  </div>
+                  <div class="order-items d-block py-2 overflow-hover-auto">
+  
+                    <div class="d-block border"></div>
+                    <div class="item d-flex justify-content-between align-items-center ">
+                      <div class="item-image d-flex justify-content-center w-25 m-2 ">
+                        <div class="order-number">
+                          <span class="order-item-number"> 1 </span>
+                        </div>
+                        <img src="images/home/img 1.png" alt="item-image" class="w-100 p-3 border rounded-2" style="max-height: 80px; max-width: 80px;">
+                      </div>
+                      <div class="items-text w-65 me-4 d-flex justify-content-between align-items-center ">
+                        <div class="left align-middle text-center w-50">
+                          <span class="d-black my-2 fs-6">Gaming Headset</span>
+                          <span class="d-block my-2 fs-6">Color Blue</span>
+                        </div>
+                        <div class="right align-middle text-end w-50">
+                          <span class="fs-6 c-A96AE6">17.00$</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-block border"></div>
+                    <div class="item d-flex justify-content-between align-items-center ">
+                      
+                      <div class="item-image d-flex justify-content-center w-25 m-2">
+                        <div class="order-number">
+                          <span class="order-item-number"> 1 </span>
+                        </div>
+                        <img src="images/home/img1 1.png" alt="item-image" class="w-100 p-3 border rounded-2" style="max-height: 80px; max-width: 80px;">
+                      </div>
+                      <div class="items-text w-65 me-4 d-flex justify-content-between align-items-center ">
+                        <div class="left align-middle text-center w-50">
+                          <span class="d-black my-2 fs-6">Watch</span>
+                          <span class="d-block my-2 fs-6">Titanium Silver</span>
+                        </div>
+                        <div class="right align-middle text-end w-50">
+                          <span class="fs-6 c-A96AE6">17.00$</span>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-block border"></div>
+                    <div class="item d-flex justify-content-between align-items-center ">
+                      <div class="item-image d-flex justify-content-center w-25 m-2 ">
+                        <div class="order-number">
+                          <span class="order-item-number"> 1 </span>
+                        </div>
+                        <img src="images/photos/fashion/5.png" alt="item-image" class="w-100 border rounded-2" style="max-height: 80px; max-width: 80px;">
+                      </div>
+                      <div class="items-text w-65 me-4 d-flex justify-content-between align-items-center ">
+                        <div class="left align-middle text-center w-50">
+                          <span class="d-black my-2 fs-6">Gaming Headset</span>
+                          <span class="d-block my-2 fs-6">Color Blue</span>
+                        </div>
+                        <div class="right align-middle text-end w-50">
+                          <span class="fs-6 c-A96AE6">17.00$</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-block border"></div>
+  
+                  </div>
+                  <div class="d-block payment-datail mx-3 mt-2 px-3 py-2 rounded-4 bg-border">
+                    <span class="d-block fs-6 fw-bold">Payment Details</span>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <spant class="fs-6">Sub Total</spant>
+                      <spant class="fs-6">534.00 $</spant>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <spant class="fs-6">Delivery Fee</spant>
+                      <spant class="fs-6">2.00 $</spant>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <spant class="fs-6">Descount</spant>
+                      <spant class="fs-6 rounded-5 bg-A96AE6 text-white px-2">0.00 $</spant>
+                    </div>
+                    <div class="d-block border my-1 border-white"></div>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <spant class="fs-6">Total</spant>
+                      <spant class="fs-6">534.00 $</spant>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center mt-2">
+                    <button class="btn border-A96AE6 border-4 c-A96AE6 rounded-4 mx-3 p-1 w-100 d-block fs-5 fw-bold text-center">Pay Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<div class="navbar navbar-dark my-2 mx-1 p-0 rounded-4" id="navbar" >
-  <div class="container">
-    <div class="menu d-flex w-100">
-      <div class="cont-left w-25">
-        <div class="d-flex">
-          <div class="home_logo">
-            <a href="#" onclick="showContainer('home-container')" class="d-flex justify-content-start align-items-end">
-              <img class="mb-2" src="images/home/main_logo.png" alt="" />
-              <img class="mb-1" src="images/home/លក់គ្រប់សព្វ.png" alt="" style="width: 40%;margin-left: -10px;">
-              <!-- <span class="fs-6 text-white text-norap" style="margin-left: -20px">លក់គ្រប់សព្វ</span> -->
-            </a>
+
+
+<div class="d-block d-sm-none">
+  <div class="navbar navbar-top navbar-dark" id="">
+    <div class="container">
+      <div class="header row p-0 w-100">
+        <div class="cont-left my-1 col-12">
+          <div class="d-flex justify-content-center gap-2 align-items-center">
+            <i class="fa-solid fa-square-phone fs-6 c-A96AE6"></i>
+            <span>Call 24/7: 040 3824 668</span>
+            <line></line>
+            <i class="fa-solid fa-circle-info fs-6 c-A96AE6"></i>
+            <a href="#"><span>About Us</span></a>
           </div>
         </div>
+        <div class="cont-rigth my-1 top-info col-12">
+          <div class="d-flex justify-content-center align-items-center gap-2 w-100">
+            <div onclick="showContainer('sellerinstruction-container')" id="sellerinstruction"
+              class="menu-item d-flex gap-2">
+              <i class="fa-solid fa-id-card fs-5 c-A96AE6"></i>
+              <span>Seller Register</span>
+            </div>
+            <line></line>
+            <div onclick="showContainer('myAcount-container')" id="myAcount" class="menu-item d-flex gap-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <i class="fa-solid fa-user fs-6 c-A96AE6"></i>
+              <span>My Account</span>
+            </div>
+          </div>
       </div>
-      <div class="cont-rigth d-flex w-75 ps-5">
-        <div class="contain-menu d-flex justify-content-between align-items-center w-100 ps-5">
-          <div>
-            <div onclick="showContainer('home-container')" id="home" class="menu-item active">
-              <span class="">Home</span>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark mx-1 my-2 rounded-4" id="navbar" >
+    <div class="container">
+      <div class="menu d-flex w-100 px-3">
+        <div class="cont-left w-25">
+          <div class="d-flex">
+            <div class="home_logo my-1">
+              <a href="#" onclick="showContainer('home-container')" class="d-flex justify-content-start align-items-end">
+                <img class="mb-2" src="images/home/main_logo.png" alt="" />
+                <img class="mb-1" src="images/home/លក់គ្រប់សព្វ.png" alt="" style="width: 40%;margin-left: -10px;">
+                <!-- <span class="fs-6 text-white text-norap" style="margin-left: -20px">លក់គ្រប់សព្វ</span> -->
+              </a>
             </div>
           </div>
-          <div>
-            <div onclick="showContainer('fashion-container')" id="fashion" class="menu-item">
-              <span class="menu-item">Fashion</span>
-            </div>
-          </div>
-          <div>
-            <div onclick="showContainer('electronis-container')" id="electronis" class="menu-item">
-              <span class="menu-item">Phone</span>
-            </div>
-          </div>
-          <div>
-            <div onclick="showContainer('sports-container')" id="sports" class="menu-item">
-              <span class="menu-item">Sports</span>
-            </div>
-          </div>
-          <div>
-            <div onclick="showContainer('food-container')" id="food" class="menu-item">
-              <span class="menu-item">Food</span>
-            </div>
-          </div>
-          <div>
-            <div onclick="showContainer('software-container')" id="software" class="menu-item">
-              <span class="menu-item">Software</span>
-            </div>
-          </div>
-          <div>
-            <div class="d-flex justify-content-center align-items-center" style="position: relative;">
-              <!-- <input onchange="showContainer('product-container')" id="_el_search" type="search"
-                class=" form-control rounded-5 fade data-input" data-field="search_value"
-                placeholder="Search Product" />
-              <span onclick="toggleSlide()" id="_btn_search" class="menu-item ">
-                <i class="fa-solid fa-magnifying-glass" style="cursor: pointer;"></i>
-              </span> -->
-              <span onclick="showContainer('product-container')" id="product" class="menu-item ">
-                <i class="fa-solid fa-magnifying-glass" style="cursor: pointer;"></i>
+        </div>
+        <div class="cont-rigth d-flex w-75 ps-5">
+          <div class="contain-menu d-flex justify-content-between align-items-center w-100 ps-5">
+            <div   class=""></div>
+              <span onclick="toggleShow()" class="">
+                <i class="fa-solid fa-bars"></i>
               </span>
-            </div>
-          </div>
-          <div>
-            <div onclick="showContainer('shopping-container')" id="shopping" class="menu-item">
-              <span class="">
-                <i class="fa-solid fa-cart-shopping"></i>
-              </span>
-              <div class="veiw-order-summary box-shadow-dark rounded-5 ">
-                <div class="title w-50 mx-auto mt-0">
-                  <span class="d-block fs-5 text-nowrap bg-dark rounded-bottom-4 text-white lh-1 text-center p-2">Order Summary</span>
-                </div>
-                <div class="order-items d-block py-2 overflow-hover-auto">
-
-                  <div class="d-block border"></div>
-                  <div class="item d-flex justify-content-between align-items-center ">
-                    <div class="item-image d-flex justify-content-center w-25 m-2 ">
-                      <div class="order-number">
-                        <span class="order-item-number"> 1 </span>
-                      </div>
-                      <img src="images/home/img 1.png" alt="item-image" class="w-100 p-3 border rounded-2" style="max-height: 80px; max-width: 80px;">
-                    </div>
-                    <div class="items-text w-65 me-4 d-flex justify-content-between align-items-center ">
-                      <div class="left align-middle text-center w-50">
-                        <span class="d-black my-2 fs-6">Gaming Headset</span>
-                        <span class="d-block my-2 fs-6">Color Blue</span>
-                      </div>
-                      <div class="right align-middle text-end w-50">
-                        <span class="fs-6 c-A96AE6">17.00$</span>
-                      </div>
+              <div id="mobile-menu" class="veiw-menu box-shadow-dark rounded-5 ">
+                <div class="w-100 ">
+                  <div class="">
+                    <div onclick="showContainer('home-container')" id="home" class="menu-item active">
+                      <span class="">Home</span>
                     </div>
                   </div>
                   <div class="d-block border"></div>
-                  <div class="item d-flex justify-content-between align-items-center ">
-                    
-                    <div class="item-image d-flex justify-content-center w-25 m-2">
-                      <div class="order-number">
-                        <span class="order-item-number"> 1 </span>
-                      </div>
-                      <img src="images/home/img1 1.png" alt="item-image" class="w-100 p-3 border rounded-2" style="max-height: 80px; max-width: 80px;">
-                    </div>
-                    <div class="items-text w-65 me-4 d-flex justify-content-between align-items-center ">
-                      <div class="left align-middle text-center w-50">
-                        <span class="d-black my-2 fs-6">Watch</span>
-                        <span class="d-block my-2 fs-6">Titanium Silver</span>
-                      </div>
-                      <div class="right align-middle text-end w-50">
-                        <span class="fs-6 c-A96AE6">17.00$</span>
-                        
-                      </div>
+                  <div>
+                    <div onclick="showContainer('fashion-container')" id="fashion" class="menu-item">
+                      <span class="menu-item">Fashion</span>
                     </div>
                   </div>
                   <div class="d-block border"></div>
-                  <div class="item d-flex justify-content-between align-items-center ">
-                    <div class="item-image d-flex justify-content-center w-25 m-2 ">
-                      <div class="order-number">
-                        <span class="order-item-number"> 1 </span>
-                      </div>
-                      <img src="images/photos/fashion/5.png" alt="item-image" class="w-100 border rounded-2" style="max-height: 80px; max-width: 80px;">
-                    </div>
-                    <div class="items-text w-65 me-4 d-flex justify-content-between align-items-center ">
-                      <div class="left align-middle text-center w-50">
-                        <span class="d-black my-2 fs-6">Gaming Headset</span>
-                        <span class="d-block my-2 fs-6">Color Blue</span>
-                      </div>
-                      <div class="right align-middle text-end w-50">
-                        <span class="fs-6 c-A96AE6">17.00$</span>
-                      </div>
+                  <div>
+                    <div onclick="showContainer('electronis-container')" id="electronis" class="menu-item">
+                      <span class="menu-item">Phone</span>
                     </div>
                   </div>
                   <div class="d-block border"></div>
-
-                </div>
-                <div class="d-block payment-datail mx-3 mt-2 px-3 py-2 rounded-4 bg-border">
-                  <span class="d-block fs-6 fw-bold">Payment Details</span>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <spant class="fs-6">Sub Total</spant>
-                    <spant class="fs-6">534.00 $</spant>
+                  <div>
+                    <div onclick="showContainer('sports-container')" id="sports" class="menu-item">
+                      <span class="menu-item">Sports</span>
+                    </div>
                   </div>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <spant class="fs-6">Delivery Fee</spant>
-                    <spant class="fs-6">2.00 $</spant>
+                  <div class="d-block border"></div>
+                  <div>
+                    <div onclick="showContainer('food-container')" id="food" class="menu-item">
+                      <span class="menu-item">Food</span>
+                    </div>
                   </div>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <spant class="fs-6">Descount</spant>
-                    <spant class="fs-6 rounded-5 bg-A96AE6 text-white px-2">0.00 $</spant>
+                  <div class="d-block border"></div>
+                  <div>
+                    <div onclick="showContainer('software-container')" id="software" class="menu-item">
+                      <span class="menu-item">Software</span>
+                    </div>
                   </div>
-                  <div class="d-block border my-1 border-white"></div>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <spant class="fs-6">Total</spant>
-                    <spant class="fs-6">534.00 $</spant>
+                  <div class="d-block border"></div>
+                  <div>
+                    <div class="d-flex justify-content-center align-items-center" style="position: relative;">
+                      <!-- <input onchange="showContainer('product-container')" id="_el_search" type="search"
+                        class=" form-control rounded-5 fade data-input" data-field="search_value"
+                        placeholder="Search Product" />
+                      <span onclick="toggleSlide()" id="_btn_search" class="menu-item ">
+                        <i class="fa-solid fa-magnifying-glass" style="cursor: pointer;"></i>
+                      </span> -->
+                      <span onclick="showContainer('product-container')" id="product" class="menu-item ">
+                        <i class="fa-solid fa-magnifying-glass" style="cursor: pointer;"></i>
+                      </span>
+                    </div>
                   </div>
-                </div>
-                <div class="d-flex justify-content-center mt-2">
-                  <button class="btn border-A96AE6 border-4 c-A96AE6 rounded-4 mx-3 p-1 w-100 d-block fs-5 fw-bold text-center">Pay Now</button>
+                  <div class="d-block border"></div>
+                  <div>
+                    <div onclick="showContainer('shopping-container')" id="shopping" class="menu-item">
+                      <span class="">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                      </span>
+                      <div class="veiw-order-summary box-shadow-dark rounded-5 ">
+                        <div class="title w-50 mx-auto mt-0">
+                          <span class="d-block fs-5 text-nowrap bg-dark rounded-bottom-4 text-white lh-1 text-center p-2">Order Summary</span>
+                        </div>
+                        <div class="order-items d-block py-2 overflow-hover-auto">
+        
+                          <div class="d-block border"></div>
+                          <div class="item d-flex justify-content-between align-items-center ">
+                            <div class="item-image d-flex justify-content-center w-25 m-2 ">
+                              <div class="order-number">
+                                <span class="order-item-number"> 1 </span>
+                              </div>
+                              <img src="images/home/img 1.png" alt="item-image" class="w-100 p-3 border rounded-2" style="max-height: 80px; max-width: 80px;">
+                            </div>
+                            <div class="items-text w-65 me-4 d-flex justify-content-between align-items-center ">
+                              <div class="left align-middle text-center w-50">
+                                <span class="d-black my-2 fs-6">Gaming Headset</span>
+                                <span class="d-block my-2 fs-6">Color Blue</span>
+                              </div>
+                              <div class="right align-middle text-end w-50">
+                                <span class="fs-6 c-A96AE6">17.00$</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-block border"></div>
+                          <div class="item d-flex justify-content-between align-items-center ">
+                            
+                            <div class="item-image d-flex justify-content-center w-25 m-2">
+                              <div class="order-number">
+                                <span class="order-item-number"> 1 </span>
+                              </div>
+                              <img src="images/home/img1 1.png" alt="item-image" class="w-100 p-3 border rounded-2" style="max-height: 80px; max-width: 80px;">
+                            </div>
+                            <div class="items-text w-65 me-4 d-flex justify-content-between align-items-center ">
+                              <div class="left align-middle text-center w-50">
+                                <span class="d-black my-2 fs-6">Watch</span>
+                                <span class="d-block my-2 fs-6">Titanium Silver</span>
+                              </div>
+                              <div class="right align-middle text-end w-50">
+                                <span class="fs-6 c-A96AE6">17.00$</span>
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-block border"></div>
+                          <div class="item d-flex justify-content-between align-items-center ">
+                            <div class="item-image d-flex justify-content-center w-25 m-2 ">
+                              <div class="order-number">
+                                <span class="order-item-number"> 1 </span>
+                              </div>
+                              <img src="images/photos/fashion/5.png" alt="item-image" class="w-100 border rounded-2" style="max-height: 80px; max-width: 80px;">
+                            </div>
+                            <div class="items-text w-65 me-4 d-flex justify-content-between align-items-center ">
+                              <div class="left align-middle text-center w-50">
+                                <span class="d-black my-2 fs-6">Gaming Headset</span>
+                                <span class="d-block my-2 fs-6">Color Blue</span>
+                              </div>
+                              <div class="right align-middle text-end w-50">
+                                <span class="fs-6 c-A96AE6">17.00$</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-block border"></div>
+        
+                        </div>
+                        <div class="d-block payment-datail mx-3 mt-2 px-3 py-2 rounded-4 bg-border">
+                          <span class="d-block fs-6 fw-bold">Payment Details</span>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <spant class="fs-6">Sub Total</spant>
+                            <spant class="fs-6">534.00 $</spant>
+                          </div>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <spant class="fs-6">Delivery Fee</spant>
+                            <spant class="fs-6">2.00 $</spant>
+                          </div>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <spant class="fs-6">Descount</spant>
+                            <spant class="fs-6 rounded-5 bg-A96AE6 text-white px-2">0.00 $</spant>
+                          </div>
+                          <div class="d-block border my-1 border-white"></div>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <spant class="fs-6">Total</spant>
+                            <spant class="fs-6">534.00 $</spant>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-center mt-2">
+                          <button class="btn border-A96AE6 border-4 c-A96AE6 rounded-4 mx-3 p-1 w-100 d-block fs-5 fw-bold text-center">Pay Now</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+        
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
