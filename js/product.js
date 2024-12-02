@@ -309,8 +309,6 @@ body.addEventListener("click", (e) => {
       // const productId = productCard.getAttribute("data-product-id");
       const product = products[6];
       setData(product);
-      console.log(1233,module);
-
     }else return;
   showContainer('detail-container',false);
 });

@@ -150,6 +150,13 @@ function getValue(){
       document.getElementById("qty").value = 'hone-container';
 }
 
+toggleShow = ()=>{
+  const mobile_menu = document.getElementById('mobile-menu');
+   if (mobile_menu)
+       mobile_menu.classList.toggle('show');
+   console.log(234225);
+}
+
 
 
 

@@ -1,5 +1,5 @@
 var swiper = new Swiper('.swiper', {
-    slidesPerView: 5,
+    slidesPerView: getNumSlide(),
     direction: getDirection(),
     navigation: {
       nextEl: '.swiper-button-next',
@@ -24,6 +24,7 @@ var swiper = new Swiper('.swiper', {
     },
     on: {
       resize: function () {
+        swiper.changeDirection(getDirection());
       },
     },
   });
@@ -37,11 +38,17 @@ var swiper = new Swiper('.swiper', {
     },
     on: {
       resize: function () {
+        swiper.changeDirection(getDirection());
       },
     },
   });
 
   function getDirection() {
     var windowWidth = window.innerWidth;
-    return windowWidth <= 760 ? 'vertical' : 'horizontal';
+    // return windowWidth <= 760 ? 'vertical' : 'horizontal';
+    return 'horizontal';
+  }
+  function getNumSlide() {
+    var windowWidth = window.innerWidth;
+    return windowWidth <= 480 ? 1 : 5;
   }
