@@ -100,8 +100,28 @@
     }
     .footer .cont-rigth.d-flex.justify-content-end{
         display: flex;
-        justify-content: center!important;
+        justify-content: center !important;
     }
+    .div-bank{
+        margin-bottom: 200px !important;
+    }
+    .div-bank .bank{
+        flex-wrap: wrap;
+    }
+    .bank .img-bank {
+        width: 80px !important;
+    }
+
+    .div-image{
+        height: 280px !important;
+        overflow: hidden;
+    }
+    .image-p, .image-d {
+        left: 50%;
+        transform: translateX(-35%)!important;
+    }
+
+
 }
 @media (max-width:360px) {
     .latest-testimo-tab .latest-post-info { padding-top: 0 }

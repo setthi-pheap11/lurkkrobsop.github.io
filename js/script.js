@@ -95,7 +95,9 @@ function showContainer(container,chengMenus = true) {
         document.getElementById("qty").value = c;
         store();
       }
-
+      if(window.innerWidth <= 480){
+        toggleShow();
+      }
       // contain.classList.remove('defult')
       if (!document.head.contains(link)) {
         document.head.appendChild(link);
@@ -151,10 +153,12 @@ function getValue(){
 }
 
 toggleShow = ()=>{
-  const mobile_menu = document.getElementById('mobile-menu');
-   if (mobile_menu)
-       mobile_menu.classList.toggle('show');
-   console.log(234225);
+  const mobile_menu = document.getElementById('mobile-menu'),
+  menu_position = document.getElementById('menu-position');
+   if (mobile_menu){
+     mobile_menu.classList.toggle('show');
+     menu_position.classList.toggle('show');
+   }
 }
 
 
