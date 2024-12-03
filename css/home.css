@@ -475,7 +475,19 @@ ul {
 .veiw-menu.show{
   margin-top:0;
 	opacity:1;
+  /* z-index: 10; */
 	visibility:visible;
+}
+.position {
+  right: -200%;
+  height: 150vh;
+  width: 150vh;
+  position: absolute;
+  z-index: 9;
+  background-color: rgba(96, 94, 94, 0.181);
+}
+.position.show{
+  right: 0;
 }
 
 #shopping:hover .veiw-order-summary{
