@@ -96,7 +96,7 @@ function showContainer(container,chengMenus = true) {
         store();
       }
       if(window.innerWidth <= 480){
-        toggleShow();
+        actionClose();
       }
       // contain.classList.remove('defult')
       if (!document.head.contains(link)) {
@@ -152,6 +152,14 @@ function getValue(){
       document.getElementById("qty").value = 'hone-container';
 }
 
+actionClose= ()=>{
+  const mobile_menu = document.getElementById('mobile-menu'),
+  menu_position = document.getElementById('menu-position');
+   if (mobile_menu){
+     mobile_menu.classList.remove('show');
+     menu_position.classList.remove('show');
+   }
+}
 toggleShow = ()=>{
   const mobile_menu = document.getElementById('mobile-menu'),
   menu_position = document.getElementById('menu-position');
