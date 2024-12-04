@@ -1,4 +1,3 @@
-
 // var selectField = document.querySelector('.goog-te-combo');
 getValue();
 let module = document.getElementById("qty").value;
@@ -88,8 +87,8 @@ function showContainer(container,chengMenus = true) {
   }
   
   containers.forEach(contain => {
-    if(contain.id === container){
-      
+    console.log(5678,contain.id , container);
+    if(contain.id == container){
       contain.classList.add('show')
       if(c != 'detail'){
         document.getElementById("qty").value = c;
@@ -132,7 +131,6 @@ function showContainer(container,chengMenus = true) {
     });
   }
   
-
 }
 
 //store value after changes
@@ -149,7 +147,7 @@ function getValue(){
       document.getElementById("qty").value = storedText; 
   }
   else
-      document.getElementById("qty").value = 'hone-container';
+      document.getElementById("qty").value = 'home';
 }
 
 actionClose= ()=>{
