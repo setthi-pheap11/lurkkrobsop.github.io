@@ -1,8 +1,6 @@
-
 // var selectField = document.querySelector('.goog-te-combo');
 getValue();
 let module = document.getElementById("qty").value;
-  console.log(2343546565,module+'-container');
 
 function translateToKhmer() {
   // Find the hidden Google Translate dropdown
@@ -88,8 +86,7 @@ function showContainer(container,chengMenus = true) {
   }
   
   containers.forEach(contain => {
-    if(contain.id === container){
-      
+    if(contain.id == container){
       contain.classList.add('show')
       if(c != 'detail'){
         document.getElementById("qty").value = c;
@@ -117,7 +114,6 @@ function showContainer(container,chengMenus = true) {
       if(cid != 'home' && cid != c){
         if (document.head.contains(elink)) {
           document.head.removeChild(elink);
-          console.log(333,elink);
         }
       }
     }
@@ -132,7 +128,6 @@ function showContainer(container,chengMenus = true) {
     });
   }
   
-
 }
 
 //store value after changes
@@ -149,7 +144,7 @@ function getValue(){
       document.getElementById("qty").value = storedText; 
   }
   else
-      document.getElementById("qty").value = 'hone-container';
+      document.getElementById("qty").value = 'home';
 }
 
 actionClose= ()=>{

@@ -1,7 +1,8 @@
 
 let navbar_hight = document.getElementById(getNavID()).offsetHeight;
-  if(module)
-  showContainer(module+'-container');
+    if(module){
+        showContainer(module+'-container');
+    }
 
 window.onscroll = function() {
 

@@ -120,6 +120,28 @@
         left: 50%;
         transform: translateX(-35%)!important;
     }
+    #registerModal .container.px-5{
+        padding: 0!important;
+    }
+    #registerModal .info-box.mx-5 , #registerModal .register-box.mx-5{
+        margin: 0!important;
+    }
+    #registerModal .info-box , #registerModal .register-box{
+        width: 100%!important;
+    }
+    #registerModal .d-flex{
+        flex-wrap: wrap;
+    }
+    #registerModal h1{
+        font-size: 2rem !important;
+        text-align: center;
+    }
+    .modal-body .home_logo{
+        padding: auto;
+    }
+    .home_logo .justify-content-start{
+        justify-content: center;
+    }
 
 
 }
