@@ -25,6 +25,6 @@ window.onscroll = function() {
 
 function getNavID() {
     var windowWidth = window.innerWidth;
-    return windowWidth <= 480 ? 'moble-navbar' : 'navbar';
+    return windowWidth <= 480 ? 'mobile-navbar' : 'navbar';
 }
 
