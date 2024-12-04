@@ -1,7 +1,6 @@
 // var selectField = document.querySelector('.goog-te-combo');
 getValue();
 let module = document.getElementById("qty").value;
-  console.log(2343546565,module+'-container');
 
 function translateToKhmer() {
   // Find the hidden Google Translate dropdown
@@ -87,7 +86,6 @@ function showContainer(container,chengMenus = true) {
   }
   
   containers.forEach(contain => {
-    console.log(5678,contain.id , container);
     if(contain.id == container){
       contain.classList.add('show')
       if(c != 'detail'){
@@ -116,7 +114,6 @@ function showContainer(container,chengMenus = true) {
       if(cid != 'home' && cid != c){
         if (document.head.contains(elink)) {
           document.head.removeChild(elink);
-          console.log(333,elink);
         }
       }
     }
