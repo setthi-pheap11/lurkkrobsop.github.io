@@ -183,7 +183,12 @@ h3 {
   -webkit-transition: all 0.8s ease-out 0s;
   transition: all 0.8s ease-out 0s;
 }
-
+.test{
+    border-radius: 15px;
+    border : 1px solid white;
+    box-shadow: 0 2px 8px -4px #0006;
+    overflow: hidden;
+}
 .box-shadow{
   border : 1px solid white;
   box-shadow: 0 2px 8px -4px #0006;
