@@ -82,12 +82,16 @@ function showContainer(container,chengMenus = true) {
   link.href = `css/${c}.css`;  
   link.id = `${c}`;
   if(c=='myAcount'){
-    showLoinForm();
+    // showLoinForm();
   }
   
   containers.forEach(contain => {
     if(contain.id == container){
       contain.classList.add('show')
+      // console.log(123,JSON.stringify(c));
+      // HomeComponent.show();
+      const componentName = c + 'Component';
+      components[componentName]?.show();
       if(c != 'detail'){
         document.getElementById("qty").value = c;
         store();
@@ -163,6 +167,8 @@ toggleShow = ()=>{
      menu_position.classList.toggle('show');
    }
 }
+
+
 
 
 
